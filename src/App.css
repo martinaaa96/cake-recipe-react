@@ -1,45 +1,3 @@
-/*
-Theme Name: Bakery
-Theme URI: https://templatesjungle.com/
-Author: TemplatesJungle
-Author URI: https://templatesjungle.com/
-Description: Bakery is specially designed product packaged for Bakeries.
-Version: 1.1
-*/
-
-/*--------------------------------------------------------------
-This is main CSS file that contains custom style rules used in this template
---------------------------------------------------------------*/
-
-/*------------------------------------*\
-    Table of contents
-\*------------------------------------*/
-/*
-1. Normalize
-2. Base Styles
-  - Clearfix
-  - Floating & Alignment
-3. Typography
-4. Divider Styles
-5. Image Styles
-  - Image with Caption
-6. Form Styles
-7. Button Styles
-  - Button Sizes
-  - Button Shapes
-  - Button Color Scheme
-8. Grid Layout
-  - Rows
-  - Columns
-  - Column with Border
-  - Responsive Utilities
-9. Table Styles
-10. Site Structure
-11. Magnific Popup
-
-/*--------------------------------------------------------------
-/** 1. Normalize
---------------------------------------------------------------*/
 html, body {
   position: relative;
   width: 100%;
@@ -61,18 +19,7 @@ body {
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
   display: block;
 }
-audio, canvas, progress, video {
-  display: inline-block;
-  vertical-align: baseline;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-[hidden],
-template {
-  display: none;
-}
+
 a {
   background-color: transparent;
   outline: 0;
@@ -82,34 +29,7 @@ a {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-b, strong, .strong {
-  font-weight: bolder;
-}
-dfn {
-  font-style: italic;
-}
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -120,10 +40,7 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dd, small {
 img {
   border: 0;
 }
-svg:not(:root) {
-  overflow: hidden;
-  display: block;
-}
+
 figure {
   margin: 1em 20px;
 }
@@ -134,23 +51,7 @@ hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-pre {
-  overflow: auto;
-}
-code, kbd, pre, samp {
-  font-family: Courier, monospace;
-  font-size: 1em;
-}
-blockquote::before, blockquote::after,
-q::before, q::after {
-  content: '';
-}
-blockquote, q {
-    quotes: "" "";
-    background: #f5f5f5;
-    padding: 2em;
-    font-style: italic;
-}
+
 button, input, optgroup, select, textarea {
   color: inherit;
   font: inherit;
@@ -169,37 +70,19 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
+ 
   cursor: pointer;
 }
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
+
 input {
   line-height: normal;
 }
-input[type="checkbox"],
-input[type="radio"] {
-  padding: 0;
-  outline: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-input[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -235,11 +118,7 @@ td, th {
 /*--------------------------------------------------------------
 /** 2. Base Styles
 --------------------------------------------------------------*/
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 html {
   box-sizing: border-box;
 }
@@ -315,20 +194,7 @@ ol li:last-child {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-dl {
-  margin-top: 0;
-  margin-bottom: 2rem;
-}
-dt,
-dd {
-  line-height: 1.42857143;
-}
-dt {
-  font-weight: bold;
-}
-dd {
-  margin-left: 0;
-}
+
 button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;
@@ -344,36 +210,6 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-}
-::selection {
-  background: rgb(206 60 131);
-  color: #fff;
-  text-shadow: none;
-}
-::-moz-selection {
-  background: rgb(206 60 131);
-  color: #fff;
-  text-shadow: none;
-}
-::-webkit-input-placeholder {
-  color: #646464; /* WebKit browsers */
-  -webkit-transition: color .2s;
-  transition: color .2s;
-}
-::-moz-placeholder {
-  color: #646464; /* Mozilla Firefox 19+ */
-  -webkit-transition: color .2s;
-  transition: color .2s;
-}
-:-ms-input-placeholder {
-  color: #646464;/* Internet Explorer 10+ */
-  -webkit-transition: color .2s;
-  transition: color .2s;
-}
-::placeholder {
-  color: #646464;
-  -webkit-transition: color .2s;
-  transition: color .2s;
 }
 
 
@@ -543,8 +379,7 @@ p {
   margin: 0 0 .75em;
   line-height: 1.7;
 }
-p, ul, ol, dl, table, fieldset, blockquote, address, pre {
-}
+
 p:empty {
   display: none;
 }
@@ -617,16 +452,7 @@ abbr {
     column-gap: 0px;
   }
 }
-.dropcap {
- float: left;
-  display: inline-block;
-  margin: 6px 10px -6px 0;
-  font-size: 550%;
-  font-weight: 500;
-  text-align: center;
-  line-height: .8em;
-  color: #121212;
-}
+
 .text-lead .dropcap {
   margin-top: 0;
 }
@@ -1065,9 +891,7 @@ textarea {
   min-height: none;
   vertical-align: top;
 }
-input[type="search"] {
-  -webkit-appearance: none;
-}
+
 input[type="radio"],
 input[type="checkbox"] {
   margin: 5px 10px 0 0;
@@ -1080,12 +904,7 @@ input[type="range"] {
   display: block;
   width: 100%;
 }
-select {
-  /*for firefox*/
-  -moz-appearance: none;
-  /*for chrome*/
-  -webkit-appearance:none;
-}
+
 /*for IE10*/
 select::-ms-expand {
     display: none;
@@ -1101,139 +920,7 @@ input[type="checkbox"]:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.radio,
-.checkbox {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.radio label,
-.checkbox label,
-.radio-inline label,
-.checkbox-inline label {
-  min-height: 20px;
-  padding-left: 30px;
-  margin-bottom: 0;
-  font-weight: normal;
-  cursor: pointer;
-}
-.radio-inline label,
-.checkbox-inline label {
-  padding-left: 25px;
-}
-.radio label::before,
-.checkbox label::before,
-.radio-inline label::before,
-.checkbox-inline label::before {
-  content: "";
-  background: #fff;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  margin-top: -9px;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.radio label::before,
-.radio-inline label::before {
-  border-radius: 50%;
-}
-.radio label::after,
-.checkbox label::after,
-.radio-inline label::after,
-.checkbox-inline label::after {
-  content: '';
-  background: transparent;
-  position: absolute;
-  top: 50%;
-  left: 4px;
-  border: 3px solid #121212;
-  border-top: none;
-  border-right: none;
-  margin-top: -4px;
-  width: 10px;
-  height: 6px;
-  opacity: 0;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.radio label::after,
-.radio-inline label::after {
-  background-color: #ff9697;
-  left: 5px;
-  border: 0;
-  border-radius: 50%;
-  width: 8px;
-  height: 8px;
-}
-.radio label:hover::after,
-.checkbox label:hover::after,
-.radio-inline label:hover::after,
-.checkbox-inline label:hover::after {
-    opacity: 0.1;
-}
-.radio input[type="radio"]:checked + label::before,
-.checkbox input[type="checkbox"]:checked + label::before,
-.radio-inline input[type="radio"]:checked + label::before,
-.checkbox-inline input[type="checkbox"]:checked + label::before {
-    background: #fff;
-}
-.radio input[type="radio"]:checked + label::after,
-.checkbox input[type="checkbox"]:checked + label::after,
-.radio-inline input[type="radio"]:checked + label::after,
-.checkbox-inline input[type="checkbox"]:checked + label::after {
-    opacity: 1;
-    border-color: #ff9697;
-}
-.radio input[type="radio"],
-.radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
-  position: absolute;
-  top: 50%;
-  margin: 0;
-  margin-left: 2px;
-  margin-top: 4px \9;
-  width: 0;
-  outline: 0;
-  opacity: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.radio + .radio,
-.checkbox + .checkbox {
-  margin-top: -5px;
-}
-.radio + .radio:last-child,
-.checkbox + .checkbox:last-child {
-  margin-bottom: 25px;
-}
-.radio-inline,
-.checkbox-inline {
-  position: relative;
-  display: inline-block;
-  padding-left: 0px;
-  margin-bottom: 0;
-  vertical-align: middle;
-  font-weight: normal;
-  cursor: pointer;
-}
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
-  margin-top: 0;
-  margin-left: 10px;
-}
+
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
 input[type="radio"].disabled,
@@ -1242,18 +929,7 @@ fieldset[disabled] input[type="radio"],
 fieldset[disabled] input[type="checkbox"] {
   cursor: not-allowed;
 }
-.radio-inline.disabled,
-.checkbox-inline.disabled,
-fieldset[disabled] .radio-inline,
-fieldset[disabled] .checkbox-inline {
-  cursor: not-allowed;
-}
-.radio.disabled label,
-.checkbox.disabled label,
-fieldset[disabled] .radio label,
-fieldset[disabled] .checkbox label {
-  cursor: not-allowed;
-}
+
 
 
 @media only screen and (min-width: 768px) {
@@ -1507,15 +1183,7 @@ fieldset[disabled] a.btn {
   text-align: right;
   display: block;
 }
-/*--------------------------------------------------------------
-/** 9. Grid Layout
---------------------------------------------------------------*/
-/*!
- * Bootstrap Grid v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
@@ -1567,41 +1235,14 @@ html {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
-  .container, .container-sm {
-    max-width: 540px;
-  }
-}
 
-@media (min-width: 768px) {
-  .container, .container-sm, .container-md {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container, .container-sm, .container-md, .container-lg {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1180px;
-  }
-}
 
 .flex-container{
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-@media screen and (max-width: 575px){
-  .wrap.flex-container {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
+
 
 .row {
   display: -ms-flexbox;
@@ -1622,82 +1263,8 @@ html {
   padding-left: 15px;
 }
 
-/*--------------------------------------------------------------
-/** 10. Table Styles
---------------------------------------------------------------*/
-table, th, td {
-  vertical-align: middle;
-}
-tr {
-  line-height: 2em;
-}
-table {
-  display: table;
-  margin-bottom: 25px;
-  padding: 0;
-  width: 100%;
-}
-table:last-child {
-  margin-bottom: 0;
-}
-table thead {
-  font-weight: bold;
-  color: #fff;
-  text-transform: none;
-}
-.light table thead {
-  border-bottom-color: rgba(255,255,255,0.05);
-  color: #fff;
-}
-table th {
-  padding: 10px 10px;
-}
-.text-center th {
-  text-align: center;
-}
-table tbody tr:hover {
-  background-color: rgba(197,157,95,0.3);
-}
-.light table tbody tr:hover {
-  background-color: rgba(197,157,95,0.3);
-}
-table td {
-  padding: 10px;
-}
-tfoot {
-  background: none;
-  padding: 6px;
-  text-align: center;
-}
 
-/* - Main Logo
---------------------------------------------------------------*/
-#logo {
-  order: -1;
-  vertical-align: middle;
-  margin: 0;
-  line-height: 1;
-  font-size: 2em;
-  font-weight: bold;
-  text-align: left;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-#logo,
-#logo a {
-  position: relative;
-  vertical-align: middle;
-}
-#logo a:hover {
-  color: inherit;
-}
-#logo img {
-  display: block;
-  width: auto;
-  height: auto;
-  max-height: 80px;
-  
-}
+
 
 /*--------------------------------------------------------------
 /** 16. Section Title
@@ -1958,229 +1525,6 @@ tfoot {
     background: #333;
 }
 
-/* - Button hover Effects 2
-------------------------------------------------------------- */
-.btn-hvr-effects2 {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-[class^="btn-"] {
-    cursor: pointer;
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-transform: uppercase;
-}
-.btn-hvr-effects2:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #333;
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-}
-.btn-hvr-effects2:hover, 
-.btn-hvr-effects2:focus, 
-.btn-hvr-effects2:active {
-    color: #fff;
-    text-decoration: none;
-}
-.btn-hvr-effects2:hover:before, 
-.btn-hvr-effects2:focus:before, 
-.btn-hvr-effects2:active:before {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-}
-
-/* - Button hover Effects 3
-------------------------------------------------------------- */
-
- .btn-hvr-effects3 {
-    position: relative;
-    display: inline-block;
-    padding: 1em 2em;
-    cursor: pointer;
-    overflow: hidden;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-}
-.btn-hvr-effects3[class^="btn-"] {
-    background: transparent;
-}
-.btn-hvr-effects3:hover{
-   color: #fff;
-   text-decoration: none;
-}
- .btn-hvr-effects3:before, 
- .btn-hvr-effects3:after {
-   content: "";
-   position: absolute;
-   left: 0;
-   height: 1px;
-   width: 100%;
-   background-color: #fff;
-}
- .btn-hvr-effects3:before {
-   top: 0;
-}
- .btn-hvr-effects3:after {
-   bottom: 0;
-}
- .btn-hvr-effects3:hover > * > *:before, 
- .btn-hvr-effects3:hover > * > *:after {
-   transform: translate3d(0, 0, 0);
-}
- .btn-hvr-effects3:hover > * > * > *:before, 
- .btn-hvr-effects3:hover > * > * > *:after {
-   transform: translate3d(0, 0, 0);
-}
- .btn-hvr-effects3 > *:before, .btn-hvr-effects3 > *:after {
-   content: "";
-   position: absolute;
-   top: 0;
-   height: 100%;
-   width: 1px;
-   background-color: #fff;
-}
- .btn-hvr-effects3 > *:before {
-   left: 0;
-}
- .btn-hvr-effects3 > *:after {
-   right: 0;
-}
- .btn-hvr-effects3 > * > *:before, 
- .btn-hvr-effects3 > * > *:after {
-   content: "";
-   position: absolute;
-   left: 0;
-   z-index: 9;
-   height: 1px;
-   width: 100%;
-   background-color: #ce3c83;
-}
- .btn-hvr-effects3 > * > *:before {
-   top: 0;
-   transform: translate3d(-105%, 0, 0);
-   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
- .btn-hvr-effects3 > * > *:after {
-   bottom: 0;
-   transform: translate3d(105%, 0, 0);
-   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
- .btn-hvr-effects3 > * > * > *:before, 
- .btn-hvr-effects3 > * > * > *:after {
-   content: "";
-   position: absolute;
-   top: 0;
-   z-index: 9;
-   height: 100%;
-   width: 1px;
-   background-color: #ce3c83;
-}
- .btn-hvr-effects3 > * > * > *:before {
-   left: 0;
-   transform: translate3d(0, 105%, 0);
-   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
- .btn-hvr-effects3 > * > * > *:after {
-   right: 0;
-   transform: translate3d(0, -105%, 0);
-   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* - Bootstrap accordion
---------------------------------------------------------------*/
-.accordion{
-   width: 100%;
-}
-.accordion-collapse {
-    overflow: hidden;
-    -webkit-transition: height 300ms cubic-bezier(0.86, 0, 0.07, 1);
-    transition: height 300ms cubic-bezier(0.86, 0, 0.07, 1);
-}
-.accordion-item {
-    border: 1px solid #cacaca;
-    padding: 30px 0;
-    margin: 20px 0;
-}
-.accordion-title a {
-    display: block;
-    position: relative;
-    font-weight: bold;
-    text-decoration: none;
-}
-.accordion-body {
-  margin: 1rem 0;
-}
-.accordion-heading a:before {
-    content: "\f107";
-    position: absolute;
-    font-family: 'icomoon';
-    right: 5px;
-    top: 5px;
-    font-size: 22px;
-    transition: all 0.5s;
-    transform: scale(1);
-}
-.accordion-heading.active a:before {
-    content: "\f106";
-    position: absolute;
-    font-family: 'icomoon';
-    right: 5px;
-    top: 0;
-    font-size: 18px;
-    transition: all 0.5s;
-    transform: scale(1);
-}
-.accordion-item .target-detail{
-    width: 90%;
-}
- 
-/* - Search Form hover Effects
-------------------------------------------------------------- */
-
-#header .action-menu {
-    display: flex;
-    align-items: baseline;
-}
-
-@media screen and (max-width: 991px){
-    #header .action-menu {
-      display: none;
-  }
-}
-@media screen and (max-width: 575px){
-    .navbar .action-menu {
-      display: none;
-  }
-}
-
-
-
-
 /* -- Navbar
 --------------------------------------------------------------*/
 
@@ -2210,20 +1554,7 @@ a.nav-link {
 }
 
 
-@media screen and (max-width: 575px){
-  .navbar #slide-navbar-collapse {
-    
-      z-index: 9999;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: #f1f1f1;
-      width: 100%;
-      margin-top: 109px;
-     
-      
-  }
-}
+
 
 /* -- Homepage Banner Section
 --------------------------------------------------------------*/
@@ -2264,113 +1595,8 @@ a.nav-link {
     opacity: 1;
 }
 
-@media (max-width: 575px) {
-    #billboard h2{
-      font-size: 1.7em;
-  }
-  #billboard .text-content{ 
-    left: 0;
-    margin: 0;
-    position: inherit;
-  }
-}
 
 
-/* -- Best Products Section
---------------------------------------------------------------*/
-
-.products-slider {
-    width: 100%;
-}
-.product-item p{
-  text-transform: uppercase;
-  font-size: 12px;
-  margin: 0;
-}
-.product-item .price{
-  font-size: 20px;
-  font-weight: bold;
-}
-.product-item a.product-image {
-    display: block;
-    overflow: hidden;
-}
-.product-item a.product-image img {
-    transition: 0.3s ease-out;
-}
-.product-item a.product-image:hover img {
-    transform: scale(1.1);
-}
-
-
-
-
-/* The overlay effect (full height and width) - lays on top of the container and over the image */
-.overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgb(0,0,0,0.4);
-    overflow: hidden;
-    width: 100%;
-    height: 430px;
-    transition: .3s ease;
-    z-index: 2;
-    margin-top: -202px;
-    opacity: 0;
-}
-
-/* When you mouse over the container, the overlay text will "zoom" in display */
-a.magnific-popup:hover .overlay {
-    opacity: 1;
-}
-
-
-/* -- Testimonial Section
---------------------------------------------------------------*/
-
-.testimonials-wrap .reviews-content{
-    background-color: rgba(0,0,0,0.6);
-    margin: 50px auto;
-    padding: 5em 7em;
-}
-.testimonials-wrap .reviews-content .rating {
-    color: #eabc3a;
-}
-.testimonials-wrap .testimonials-inner p{
-    font-size: 22px;
-}
-.testimonials-wrap .testimonials-inner p.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-.testimonials-wrap .testimonials-inner p.zoomIn {
-    -webkit-animation-name: zoomIn;
-    animation-name: zoomIn;
-}
-.testimonials-wrap .testimonial-author {
-    margin: 2em auto;
-}
-.testimonials-wrap .testimonial-author img {
-    margin: 0 auto;
-}
-.testimonials-wrap .slick-dots li.slick-active button:before {
-    opacity: 1;
-    color: #ce3c83;
-}
-.testimonials-wrap .slick-dots li button:before{
-    color: #fff;
-}
-
-@media only screen and (max-width: 768px) {
-  .testimonials-wrap .testimonials-inner p {
-    font-size: 15px;
-  }
-}
 
 
 /* - Footer Bottom Section

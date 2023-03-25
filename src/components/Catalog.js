@@ -10,7 +10,7 @@ export default function Catalog(){
                 <h4 className="pt-4">Black Forest Pastry</h4>
                 <p>Description: The pastry is also a dessert that is primarily made using flour, butter and water.  </p>
                     <span className="price colored">Price: $12</span>
-                    <p class="img"><img src="images/cake-item1.jpg"/></p>
+                    <p class="img "><img src="images/cake-item1.jpg"/></p>
                     <button type="submit"  className="button">Details</button>
                 </ul>
 						</div>

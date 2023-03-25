@@ -1,6 +1,7 @@
 import './App.css'
 import Catalog from './components/Catalog';
 import CreateProduct from './components/CreateProduct';
+import Edit from './components/Edit';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -13,7 +14,8 @@ function App() {
 <>
    <Header   />
    <Home/>
-
+<Edit/>
+<Catalog/>
    <Footer/>
 
     </>
