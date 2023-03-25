@@ -1,4 +1,5 @@
 import './App.css'
+import Catalog from './components/Catalog';
 import CreateProduct from './components/CreateProduct';
 
 import Footer from './components/Footer';
@@ -12,7 +13,7 @@ function App() {
 <>
    <Header   />
    <Home/>
- <CreateProduct/>
+
    <Footer/>
 
     </>
