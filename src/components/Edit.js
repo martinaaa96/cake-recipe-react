@@ -9,7 +9,7 @@ export default function Edit(){
             </figure>
            
             <div className="text-content col-md-8" >
-            <form className="text-center "/> <h4>Edit product </h4>
+			<form className="text-center"> <h4>Edit cake </h4></form>
             <p className="field">
                 <span className="input">
                     <input type="text" name="title" id="title" placeholder="Title"/>
