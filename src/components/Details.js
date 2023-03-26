@@ -17,7 +17,7 @@ export default function Details() {
                             <p class="img "><img src="images/cake-item1.jpg" /></p>
                             <a className="btn-hvr-effects mt-3">Edit</a>
                             <a className="btn-hvr-effects mt-3">Delete</a>
-                            
+
                         </ul>
                     </div>
                 </div>
