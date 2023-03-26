@@ -1,5 +1,5 @@
 
-
+import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -9,38 +9,28 @@ import Catalog from './components/Catalog';
 import CreateProduct from './components/CreateProduct';
 import Details from './components/Details';
 import Edit from './components/Edit';
+import Header from './components/Header';
 function App() {
   return (
     <>
-      <header>
-        <nav>
-          <div className="logo">
-            <img src="images/main-logo.png" alt="logo" />
-          </div>
-          <ul className="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Catalog</a></li>
-            <li><a href="#">Create Cake</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
-        </nav>
-      </header>
+     <div id="box">
+<Header/>
+      
       <main>
-      <Home/>
-      <Login/>
-      <Register/>
-      <Catalog/>
-      <CreateProduct/>
-      <Details/>
-      <Edit/>
+      <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+      <Route path='/catalog' element={<Catalog/>} />
+      <Route path='/create' element={ <CreateProduct/>} />
+      </Routes>
 
       
     
 
 </main>
       <Footer />
+      </div>
 
     </>
   );
