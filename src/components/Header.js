@@ -1,32 +1,30 @@
+import { Link } from "react-router-dom";
+
+
 export default function Header(){
     
-  return (
-      <header id="header">
-      <div className="container">
-        <div className="row ">
-          
-        <nav className="navbar">
+    return (
+        <header id="header">
+        <div className="container">
+          <div className="row ">
+          <nav class="navbar">
 
-          <div className="navbar-brand">
+<div class="navbar-brand">
 
-              <img src="images/main-logo.png" alt="" />
+        <img src="images/main-logo.png" alt="logo"/>
+    
+</div>
+<ul class="nav-links">
 
+  
+  </ul>
+    
+
+
+</nav>
+      
           </div>
-          <div className="navbar-collapse collapse " id="form-control mr-sm-2 nav ">
-              <ul className="navbar-nav list-inline">
-                  <li className="nav-item text-hover"><a href="/" className="nav-link" data-effect="Home">Home</a></li>
-                  <li className="nav-item text-hover"><a href="/products" className="nav-link" data-effect="Products">Products</a></li>
-                  <li className="nav-item text-hover"><a href="/createProducts" className="nav-link" data-effect="Create product">Create product</a></li>
-                  <li className="nav-item text-hover"><a href="/login" className="nav-link" data-effect="Login">Login</a></li>
-                  <li className="nav-item text-hover"><a href="/register" className="nav-link" data-effect="Register">Register</a></li>
-                  <li className="nav-item text-hover"><a href="/logout" className="nav-link" data-effect="Logout">Logout</a></li>
-              </ul>
-          </div>
-
-
-      </nav>
         </div>
-      </div>
-    </header>
-  )
+      </header>
+    )
 }
