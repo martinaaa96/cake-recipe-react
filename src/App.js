@@ -1,27 +1,20 @@
+import { Routes, Route } from 'react-router-dom'
+
 import './App.css'
-import CreateProduct from './components/CreateProduct';
-import Edit from './components/Edit';
-import Catalog from './components/Catalog';
-
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
-import Details from './components/Details';
-
-
+import Header  from './components/Header';
 
 function App() {
   return (
 <>
-   <Header />
+<div id="box">
+<Header/>
+<main id="main-content">
+<Routes>
 
-   <Details/>
 
-
-   <Footer/>
-
+</Routes>
+</main>
+</div>
     </>
   );
 }
