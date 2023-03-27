@@ -421,6 +421,14 @@ input[type="submit"]:hover {
         margin-bottom: 20px;
       }
 
+      .login-link a {
+        color: #1b15bc;
+        text-decoration: none;
+      }
+      
+      .register-link a:hover {
+        text-decoration: underline;
+      }
       /* Create product css style */
 
       .product-container {

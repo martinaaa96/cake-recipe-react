@@ -4,7 +4,7 @@ export default function CreateProduct(){
 		<section>
 		<div className="product-container">
 		   <h2>Add Product Form</h2>
-		   <form action="" method="post">
+		   <form id="create" method="post">
 			 <label htmlFor="name">Product Name:</label>
 			 <input type="text" id="name" name="name" value=""/>
 			 

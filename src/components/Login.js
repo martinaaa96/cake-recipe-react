@@ -15,7 +15,7 @@ export default function Login(){
         <input type="submit" value="Login"/>
       </form>
       <div className="error-message"></div>
-	  <div class="register-link">
+	  <div className="register-link">
         Don't have an account? <a href="/register">Register here</a>
       </div>
     </div>

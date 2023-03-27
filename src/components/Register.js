@@ -16,10 +16,11 @@ export default function Register(){
         
         <input type="submit" value="Register"/>
       </form>
-      <div className="register-link">
-        You already have an account<a href="/login"> Login here</a>
-      </div>
       <div className="error-message"></div>
+      <div className="login-link">
+        You already have an account - <a href="/login"> Login here</a>
+      </div>
+     
     </div>
     </section>
        
