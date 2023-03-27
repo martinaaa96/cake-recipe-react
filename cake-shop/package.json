@@ -14,9 +14,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "nodemon -e * index.js -dev",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+
+    
   },
   "eslintConfig": {
     "extends": [
