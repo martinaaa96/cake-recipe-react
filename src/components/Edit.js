@@ -5,16 +5,17 @@ export default function Edit(){
         <div className="product-container">
               <h2>Edit product</h2>
               <form action="" method="post">
-              <img class="product-image" src="images/cake-item1.jpg"alt="Product Image"/>
-                <label fhtmlFor="name">Product Name:</label>
-                <input type="text" id="name" name="name" value=" Black Forest Pastry"/>
+              <label htmlFor="cake-image">Image:</label>
+              <input type="text" id="imageUrl" name="imageUrl" value=""/>
+             
+                <label htmlFor="name">Product Name:</label>
+                <input type="text" id="name" name="name" value=""/>
                 
                 <label htmlFor="description">Description:</label>
-                <textarea id="description" name="description">Description: The pastry is also a dessert that is primarily made using flour,
-                butter and water.</textarea>
+                <textarea id="description" name="description" value=""></textarea>
                 
                 <label htmlFor="price">Price:</label>
-                <input type="text" id="price" name="price" value=" $12"/>
+                <input type="text" id="price" name="price" value=""/>
               
               </form>
               <div className="edit-delete-container">

@@ -5,17 +5,17 @@ export default function CreateProduct(){
 		<div className="product-container">
 		   <h2>Add Product Form</h2>
 		   <form action="" method="post">
-			 <label for="name">Product Name:</label>
-			 <input type="text" id="name" name="name" />
+			 <label htmlFor="name">Product Name:</label>
+			 <input type="text" id="name" name="name" value=""/>
 			 
-			 <label for="description">Product Description:</label>
-			 <textarea id="description" name="description"></textarea>
+			 <label htmlFor="description">Product Description:</label>
+			 <textarea id="description" name="description" value=""></textarea>
 			 
-			 <label for="price">Product Price:</label>
-			 <input type="number" id="price" name="price"/>
+			 <label htmlFor="price">Product Price:</label>
+			 <input type="number" id="price" name="price" value=""/>
 			 
-			 <label for="image">Product Image:</label>
-			 <input type="text" id="image" name="image" />
+			 <label htmlFor="image">Product Image:</label>
+			 <input type="text" id="image" name="image" value=""/>
 			 
 			 <input type="submit" value="Add Product"/>
 		   </form>

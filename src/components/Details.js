@@ -5,8 +5,8 @@ export default function Details() {
 <div className="product-container">
       <h2>Product Details</h2>
       <form action="" method="post">
-      <img class="product-image" src="images/cake-item1.jpg"alt="Product Image"/>
-        <label fhtmlFor="name">Product Name:</label>
+      <img className="product-image" src="images/cake-item1.jpg"/>
+        <label htmlFor="name">Product Name:</label>
         <input type="text" id="name" name="name" value=" Black Forest Pastry"/>
         
         <label htmlFor="description">Description:</label>
