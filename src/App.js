@@ -7,8 +7,9 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
 import Catalog from './components/Catalog/Catalog';
-import CreateProduct from './components/CreateProduct';
+import CreateProduct from './components/CreateProduct/CreateProduct';
 import Header from './components/Header';
+import Error from './components/Error';
 import './App.css'
 function App() {
   
@@ -21,8 +22,10 @@ function App() {
     })
   },[]);
   
-  
-  
+  const onCakeCreateSubmit =(data )=>{
+
+
+  }
   return (
     <>
    
@@ -43,7 +46,7 @@ function App() {
 </main>
 
       <Footer />
-      
+
 
     </>
   );
