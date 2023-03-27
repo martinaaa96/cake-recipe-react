@@ -7,7 +7,7 @@ export default function Login(){
       <h2>Login Form</h2>
       <form action="" method="post">
         <label htmlFor="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="Sokka@gmail.com" />
+        <input type="text" id="email" name="email" placeholder="marti@gmail.com" />
         
         <label htmlFor="password">Password:</label>
         <input type="password" id="password" name="password" />

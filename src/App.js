@@ -7,13 +7,11 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Catalog from './components/Catalog';
 import CreateProduct from './components/CreateProduct';
-import Details from './components/Details';
-import Edit from './components/Edit';
 import Header from './components/Header';
 function App() {
   return (
     <>
-     <div id="box">
+   
 <Header/>
       
       <main>
@@ -31,7 +29,7 @@ function App() {
 </main>
 
       <Footer />
-      </div>
+      
 
     </>
   );
