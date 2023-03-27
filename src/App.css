@@ -262,12 +262,14 @@ nav {
 
 .nav-links li {
   margin-right: 20px;
+  
 }
 
 .nav-links a {
   color: #100f0f;
   text-decoration: none;
   font-size: 18px;
+  padding: 0px 20px; 
 }
 
 
