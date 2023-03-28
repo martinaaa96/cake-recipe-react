@@ -11,11 +11,11 @@ export default function Edit(){
                 <label htmlFor="name">Product Name:</label>
                 <input type="text" id="name" name="name" value=""/>
                 
-                <label htmlFor="description">Description:</label>
+                <label htmlFor="description">Product Recipe</label>
                 <textarea id="description" name="description" value=""></textarea>
                 
-                <label htmlFor="price">Price:</label>
-                <input type="text" id="price" name="price" value=""/>
+                <label htmlFor="time">Price:</label>
+                <input type="text" id="time" name="time" value=""/>
               
               </form>
               <div className="edit-delete-container">

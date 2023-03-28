@@ -11,7 +11,7 @@ export default function CreateProduct({
 	const [values, setValues] = useState({
 		name: '',
 		description: '',
-		price: null,
+		time: null,
 		image: '',
 
 	})
@@ -36,11 +36,11 @@ export default function CreateProduct({
 					<label htmlFor="name">Product Name:</label>
 					<input value={values.name} onChange={onChangeHandler} type="text" id="name" name="name" />
 
-					<label htmlFor="description">Product Description:</label>
+					<label htmlFor="description">Product Recipe:</label>
 					<input value={values.description} onChange={onChangeHandler} type="text" id="name" name="name" />
 
-					<label htmlFor="price">Product Price:</label>
-					<input value={values.price} onChange={onChangeHandler} type="number" id="price" name="price" />
+					<label htmlFor="time">Cooking time :</label>
+					<input value={values.time} onChange={onChangeHandler} type="number" id="time" name="time" />
 
 					<label htmlFor="image">Product Image:</label>
 					<input value={values.image} onChange={onChangeHandler} type="text" id="image" name="image" />

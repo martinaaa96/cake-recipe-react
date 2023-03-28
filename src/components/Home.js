@@ -6,9 +6,9 @@ export default function Home(){
         <img src="images/banner1.jpg"/>
        
   <div className="text-content col-md-8">
-                      <span> FRESHLY BAKED EVERY MORNING</span>
+                      <span>See the best cake recipes.</span>
                       <h2 className="text-uppercase colored padding-xsmall">DELICIOUS CUPCAKES FOR YOU</h2>
-                      <p>A gorgeous selection of our favorites for a client to send as a new year’s gift.A gorgeous selection of our favorites for a client to send as a new year’s gift</p>
+                      <p>Trusted recipes for chocolate cake, white cake, banana cakes, and carrot cakes with photos and tips from home cooks.</p>
                       <div className="pix_btn">
                           <a className="btn-hvr-effects mt-3">Products</a>
                       </div>

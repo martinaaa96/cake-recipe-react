@@ -9,12 +9,12 @@ export default function Details() {
         <label htmlFor="name">Product Name:</label>
         <input type="text" id="name" name="name" value=" Black Forest Pastry"/>
         
-        <label htmlFor="description">Description:</label>
-        <textarea id="description" name="description">Description: The pastry is also a dessert that is primarily made using flour,
+        <label htmlFor="description">Product Recipe:</label>
+        <textarea id="description" name="description">The pastry is also a dessert that is primarily made using flour,
         butter and water.</textarea>
         
-        <label htmlFor="price">Price:</label>
-        <input type="text" id="price" name="price" value=" $12"/>
+        <label htmlFor="time">Cooking time:</label>
+        <input type="text" id="time" name="time" value=" 12"/>
       
       </form>
       <div className="edit-delete-container">
