@@ -488,8 +488,8 @@ input[type="submit"]:hover {
       /* Details page css style */
       .container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: default;
+        align-items: flex-start;
         margin-top: 50px;
       }
       

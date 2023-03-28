@@ -21,13 +21,11 @@ setCake(result)
     <h2>Product Details</h2>
     <section>
       <div className="product-container">
-      <h3 className="name">{cake.name}</h3>
-        <div className="container">
-	
-		<img className="image" src={cake.image}/>
-		<p className="description">Recipe: {cake.description}</p>
-		<p className="time">Cooking time: {cake.time}</p>
-	</div>
+      <h4 className="pt-4">{cake.name}</h4>
+      <img className="image" src={cake.image}/>
+      <p>Recipe: {cake.description} </p>
+      <h5><span className="time colored">Cooking time: {cake.time}</span></h5>
+        
         <div className="edit-delete-container">
           <button className="edit-button">Edit</button>
           <button className="delete-button">Delete</button>
