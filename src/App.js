@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route , useNavigate} from 'react-router-dom';
 
 import * as cakeService from './services/cakeService'
 import Footer from './components/Footer';
@@ -9,10 +9,12 @@ import Register from './components/Register';
 import Catalog from './components/Catalog/Catalog';
 import CreateProduct from './components/CreateProduct/CreateProduct';
 import Header from './components/Header';
-import Error from './components/Error';
+
 import './App.css'
+import Details from './components/Details';
 function App() {
-  
+  const navigate = useNavigate();
+
   const [cakes, setCake] = useState([]);
 
   useEffect(()=>{
@@ -22,9 +24,15 @@ function App() {
     })
   },[]);
   
-  const onCakeCreateSubmit =(data )=>{
+  const onCakeCreateSubmit = async (data )=>{
+console.log(data)
+const newCake = await cakeService.create(data);
 
 
+//todo:save in state
+setCake(state => [...state,newCake])
+
+navigate('/catalog')
   }
   return (
     <>
@@ -37,7 +45,8 @@ function App() {
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
       <Route path='/catalog' element={<Catalog cakes={cakes}/>} />
-      <Route path='/create' element={ <CreateProduct/>} />
+      <Route path='/create' element={ <CreateProduct onCakeCreateSubmit={onCakeCreateSubmit}/>} />
+      <Route path ='/catalog/:cakeId' element={<Details/>}/>
       </Routes>
 
       

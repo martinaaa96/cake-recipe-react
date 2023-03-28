@@ -9,3 +9,18 @@ export const getAll = async ()=>{
 
     return cakes;
 }
+export const getOne = async(cakeId)=>{
+    const result = await request.get(`${baseUrl}/${cakeId}`)
+
+
+return result
+}
+
+export const create = async(dataCake)=>{
+
+    const result = await request.post(baseUrl, dataCake)
+
+  
+    return result
+}
+

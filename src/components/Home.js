@@ -8,7 +8,7 @@ export default function Home(){
   <div className="text-content col-md-8">
                       <span>See the best cake recipes.</span>
                       <h2 className="text-uppercase colored padding-xsmall">DELICIOUS CUPCAKES FOR YOU</h2>
-                      <p>Trusted recipes for chocolate cake, white cake, banana cakes, and carrot cakes with photos and tips from home cooks.</p>
+                      <p>Trusted recipes for chocolate cake, white cake, banana cakes,carrot cakes and more with photos and tips from home cooks.</p>
                       <div className="pix_btn">
                           <a className="btn-hvr-effects mt-3">Products</a>
                       </div>

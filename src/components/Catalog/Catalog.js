@@ -7,7 +7,7 @@ export default function Catalog({
 
   return (
     <section>
-      <h2 className="section-title text-center mb-4">Products</h2>
+      <h2 className="section-title text-center mb-4">Recipes</h2>
 
 
       {cakes.map(x =>

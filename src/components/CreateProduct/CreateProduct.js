@@ -11,7 +11,7 @@ export default function CreateProduct({
 	const [values, setValues] = useState({
 		name: '',
 		description: '',
-		time: null,
+		time: '',
 		image: '',
 
 	})
@@ -31,17 +31,15 @@ export default function CreateProduct({
 			<div className="product-container">
 				<form id="create" onSubmit={onSubmit} method="post">
 					<h2>Create Cake</h2>
-
-
 					<label htmlFor="name">Product Name:</label>
 					<input value={values.name} onChange={onChangeHandler} type="text" id="name" name="name" />
-
-					<label htmlFor="description">Product Recipe:</label>
-					<input value={values.description} onChange={onChangeHandler} type="text" id="name" name="name" />
 
 					<label htmlFor="time">Cooking time :</label>
 					<input value={values.time} onChange={onChangeHandler} type="number" id="time" name="time" />
 
+					<label htmlFor="description">Product Recipe:</label>
+					<textarea  value={values.description} onChange={onChangeHandler} type="text" name="description" id="description" ></textarea>
+  
 					<label htmlFor="image">Product Image:</label>
 					<input value={values.image} onChange={onChangeHandler} type="text" id="image" name="image" />
 
