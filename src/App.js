@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route , useNavigate} from 'react-router-dom';
 
-import * as cakeService from './services/cakeService'
+import * as cakeService from './services/cakeService';
+import { AuthContext } from './components/contexts/AuthContext';
+
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -17,6 +19,9 @@ function App() {
 
   const [cakes, setCake] = useState([]);
 
+  const [auth,setAuth]= useState({});
+
+
   useEffect(()=>{
     cakeService.getAll()
     .then(result =>{
@@ -28,15 +33,20 @@ function App() {
 console.log(data)
 const newCake = await cakeService.create(data);
 
-
-//todo:save in state
 setCake(state => [...state,newCake])
 
 navigate('/catalog')
   }
+
+
+  const onLoginSubmit = async (e)=>{
+e.preventDefault();
+console.log(Object.fromEntries(new FormData(e.target)))
+
+  }
   return (
+    <AuthContext.Provider value={{onLoginSubmit}}>
     <>
-   
 <Header/>
       
       <main>
@@ -58,6 +68,7 @@ navigate('/catalog')
 
 
     </>
+    </AuthContext.Provider>
   );
 }
 
