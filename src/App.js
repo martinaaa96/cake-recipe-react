@@ -3,6 +3,7 @@ import { Routes, Route , useNavigate} from 'react-router-dom';
 
 import * as cakeService from './services/cakeService';
 import { AuthContext } from './components/contexts/AuthContext';
+import * as authService from './services/authService';
 
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -39,13 +40,34 @@ navigate('/catalog')
   }
 
 
-  const onLoginSubmit = async (e)=>{
-e.preventDefault();
-console.log(Object.fromEntries(new FormData(e.target)))
+  const onLoginSubmit = async (data)=>{
 
+    try{
+      const result = await authService.login(data);
+      setAuth(result)
+
+      navigate('/');
+
+    }catch(error){
+
+      console.log(`Error ${error.message}`)
+    }
+  
+    
   }
+
+  const context = {
+    onLoginSubmit,
+    userId: auth._id,
+    token: auth.accessToken,
+    userEmail: auth.email,
+    isAuthenticated:!!auth.accessToken,
+
+  };
+
+
   return (
-    <AuthContext.Provider value={{onLoginSubmit}}>
+    <AuthContext.Provider value={context}>
     <>
 <Header/>
       
