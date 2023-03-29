@@ -1,28 +1,59 @@
-export default function Register(){
+import { useContext } from "react";
+import { Link } from 'react-router-dom'
+import { useForm } from "../hooks/useForm";
 
-    return (
-        <section>
-    <div className="register-container">
-      <h2>Register Form</h2>
-      <form action="" method="post"> 
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email"  placeholder="marti@gmail.com"/>
-        
-        <label htmlFor="password">Password:</label>
-        <input type="password" id="password" name="password" />
-        
-        <label htmlFor="confirm-password">Confirm Password:</label>
-        <input type="password" id="confirm-password" name="confirm-password" />
-        
-        <input type="submit" value="Register"/>
-      </form>
-      <div className="error-message"></div>
-      <div className="login-link">
-        You already have an account - <a href="/login"> Login here</a>
+import { AuthContext } from "./contexts/AuthContext";
+
+export default function Register() {
+
+  const { onRegisterSubmit } = useContext(AuthContext)
+
+  const { values, changeHandler, onSubmit } = useForm({
+    email: '',
+    password: '',
+    repeatPassword: '',
+
+  }, onRegisterSubmit)
+
+  return (
+    <section>
+      <div className="register-container">
+        <h2>Register Form</h2>
+        <form method="POST" onSubmit={onSubmit}>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="marti@gmail.com" 
+            value={values.email}
+            onChange={changeHandler}/>
+
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={values.password}
+            onChange={changeHandler} />
+
+          <label htmlFor="repeat-password">Repeat Password:</label>
+          <input
+            type="password"
+            id="repeat-password"
+            name="repeatPassword" 
+            value={values.repeatPassword}
+            onChange={changeHandler}/>
+
+          <input type="submit" value="Register" />
+        </form>
+        <div className="error-message"></div>
+        <div className="login-link">
+          You already have an account - <Link to="/login"> Login here</Link>
+        </div>
+
       </div>
-     
-    </div>
     </section>
-       
-    )
+
+  )
 }

@@ -1,5 +1,5 @@
 import { useContext } from "react"
-
+import {Link} from 'react-router-dom'
 import { AuthContext } from "./contexts/AuthContext"
 
 import { useForm } from "../hooks/useForm"
@@ -46,7 +46,7 @@ export default function Login() {
         </form>
         <div className="error-message"></div>
         <div className="register-link">
-          Don't have an account? <a href="/register">Register here</a>
+          Don't have an account? <Link to="/register">Register here</Link>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route , useNavigate} from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import * as cakeService from './services/cakeService';
 import { AuthContext } from './components/contexts/AuthContext';
@@ -15,81 +15,108 @@ import Header from './components/Header';
 
 import './App.css'
 import Details from './components/Details';
+import Logout from './components/Logout';
 function App() {
   const navigate = useNavigate();
 
   const [cakes, setCake] = useState([]);
 
-  const [auth,setAuth]= useState({});
+  const [auth, setAuth] = useState({});
 
 
-  useEffect(()=>{
+  useEffect(() => {
     cakeService.getAll()
-    .then(result =>{
-     setCake(result)
-    })
-  },[]);
-  
-  const onCakeCreateSubmit = async (data )=>{
-console.log(data)
-const newCake = await cakeService.create(data);
+      .then(result => {
+        setCake(result)
+      })
+  }, []);
 
-setCake(state => [...state,newCake])
+  const onCakeCreateSubmit = async (data) => {
+    console.log(data)
+    const newCake = await cakeService.create(data);
 
-navigate('/catalog')
+    setCake(state => [...state, newCake])
+
+    navigate('/catalog')
   }
 
 
-  const onLoginSubmit = async (data)=>{
+  const onLoginSubmit = async (data) => {
 
-    try{
+    try {
       const result = await authService.login(data);
       setAuth(result)
 
       navigate('/');
 
-    }catch(error){
+    } catch (error) {
 
       console.log(`Error ${error.message}`)
     }
-  
-    
+
+
   }
 
+  const onRegisterSubmit = async (values) => {
+    const { repeatPassword, ...dataRegister } = values;
+    if (repeatPassword !== dataRegister.password) {
+
+      return;
+    }
+    try {
+
+      const result = await authService.register(dataRegister);
+      setAuth(result)
+      navigate('/login');
+
+
+    } catch (error) {
+      console.log(`Error ${error.message}`);
+
+    }
+  }
+  const onLogout = async () => {
+
+   // await authService.logout();
+    setAuth({});
+
+
+  }
   const context = {
     onLoginSubmit,
+    onRegisterSubmit,
+    onLogout,
     userId: auth._id,
     token: auth.accessToken,
     userEmail: auth.email,
-    isAuthenticated:!!auth.accessToken,
+    isAuthenticated: !!auth.accessToken,
 
   };
-
-
   return (
     <AuthContext.Provider value={context}>
-    <>
-<Header/>
-      
-      <main>
-      <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Register />} />
-      <Route path='/catalog' element={<Catalog cakes={cakes}/>} />
-      <Route path='/create' element={ <CreateProduct onCakeCreateSubmit={onCakeCreateSubmit}/>} />
-      <Route path ='/catalog/:cakeId' element={<Details/>}/>
-      </Routes>
+      <>
+        <Header />
 
-      
-    
-
-</main>
-
-      <Footer />
+        <main>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/catalog' element={<Catalog cakes={cakes} />} />
+            <Route path='/create' element={<CreateProduct onCakeCreateSubmit={onCakeCreateSubmit} />} />
+            <Route path='/catalog/:cakeId' element={<Details />} />
+            <Route path='/logout' element={<Logout />} />
+          </Routes>
 
 
-    </>
+
+
+        </main>
+
+        <Footer />
+
+
+      </>
     </AuthContext.Provider>
   );
 }
