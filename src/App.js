@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 
-import * as cakeService from './services/cakeService';
+import { cakeServiceFactory } from './services/cakeService';
 import { AuthContext } from './components/contexts/AuthContext';
-import * as authService from './services/authService';
-
+import { authServiceFactory } from './services/authService';
+import { useService } from './hooks/useService';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -16,6 +16,7 @@ import Header from './components/Header';
 import './App.css'
 import Details from './components/Details';
 import Logout from './components/Logout';
+
 function App() {
   const navigate = useNavigate();
 
@@ -23,6 +24,8 @@ function App() {
 
   const [auth, setAuth] = useState({});
 
+  const cakeService = cakeServiceFactory(auth.accessToken);
+  const authService = authServiceFactory(auth.accessToken)
 
   useEffect(() => {
     cakeService.getAll()
@@ -77,7 +80,7 @@ function App() {
   }
   const onLogout = async () => {
 
-   // await authService.logout();
+    await authService.logout();
     setAuth({});
 
 

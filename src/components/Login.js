@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { AuthContext } from "./contexts/AuthContext"
 
 import { useForm } from "../hooks/useForm"
@@ -12,11 +12,11 @@ export default function Login() {
 
   const { onLoginSubmit } = useContext(AuthContext);
 
-  const {values, changeHandler,onSubmit} = useForm({
+  const { values, changeHandler, onSubmit } = useForm({
     [LoginFormKeys.Email]: '',
-        [LoginFormKeys.Password]: '',
+    [LoginFormKeys.Password]: '',
 
-  },onLoginSubmit);
+  }, onLoginSubmit);
 
 
   return (
@@ -24,23 +24,23 @@ export default function Login() {
       <div className="login-container" id='auth'>
 
         <h2>Login Form</h2>
-        <form  method="POST" onSubmit={onSubmit}>
+        <form method="POST" onSubmit={onSubmit}>
           <label htmlFor="email">Email:</label>
-          <input 
-          type="text" 
-          id="email" 
-          name={LoginFormKeys.Email}
-          placeholder="marti@gmail.com"
-          values={values.email} 
-          onChange={changeHandler}/>
+          <input
+            type="text"
+            id="email"
+            name={LoginFormKeys.Email}
+            placeholder="marti@gmail.com"
+            values={values.email}
+            onChange={changeHandler} />
 
           <label htmlFor="password">Password:</label>
-          <input 
-          type="password" 
-          id="password" 
-          name={LoginFormKeys.Password}
-          values={values.password}
-          onChange={changeHandler}/>
+          <input
+            type="password"
+            id="password"
+            name={LoginFormKeys.Password}
+            values={values.password}
+            onChange={changeHandler} />
 
           <input type="submit" value="Login" />
         </form>
