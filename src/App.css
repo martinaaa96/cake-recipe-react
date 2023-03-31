@@ -569,28 +569,8 @@ input[type="submit"]:hover {
       }
       
 
-      /* Like button style css */
-      .like-button {
-        display: inline-block;
-        padding: 0.75em 1.5em;
-        cursor: pointer;
-        background: #ce3c83;
-        border-radius: 6px;
-        text-decoration: none;
-        color: #fff;
-      }
       
-      .heart-icon {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        margin-right: 5px;
-   
-        background-repeat: no-repeat;
-      }
-      
-      .like-text {
-        font-size: 14px;
-        color: #333;
-      }
-      
+       /* Like button heart  css style */
+       span.heart{
+        font-size: 20px;
+       }
