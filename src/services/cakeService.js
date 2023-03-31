@@ -29,10 +29,17 @@ export const cakeServiceFactory = (token) => {
         return result
     }
 
+    const remove = (cakeId) => { request.delete(`${baseUrl}/${cakeId}`)
+
+
+
+    }
+
     return {
         getAll,
         getOne,
         create,
+        remove,
     }
 
 }
