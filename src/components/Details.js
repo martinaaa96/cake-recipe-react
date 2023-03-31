@@ -32,9 +32,9 @@ export default function Details() {
 
   const onDeleteClick =  async () => {
 
- await  cakeService.remove(cake._id)
+ const deteleCake = await  cakeService.remove(cake._id)
 
- // delete from state
+ setCake()
  
  navigate('/catalog');
 

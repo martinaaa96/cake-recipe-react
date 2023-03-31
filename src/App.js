@@ -86,6 +86,14 @@ function App() {
 
 
   }
+
+  const onCakeEditSubmit = async ( cakeId, values)=>{
+    const newCake = await cakeService.edit(cakeId, values);
+
+   setCake(state => [...state, newCake])
+
+    navigate(`/catalog/${cakeId}`)
+  }
   const context = {
     onLoginSubmit,
     onRegisterSubmit,
@@ -110,7 +118,7 @@ function App() {
             <Route path='/create' element={<CreateProduct onCakeCreateSubmit={onCakeCreateSubmit} />} />
             <Route path='/catalog/:cakeId' element={<Details />} />
             <Route path='/logout' element={<Logout />} />
-            <Route path='/catalog/:cakeId/edit' element={<Edit />} />
+            <Route path='/catalog/:cakeId/edit' element={<Edit  onCakeEditSubmit={onCakeEditSubmit}/>} />
           </Routes>
 
 

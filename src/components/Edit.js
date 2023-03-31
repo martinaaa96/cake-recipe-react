@@ -41,7 +41,7 @@ export default function Edit({
           <input
             type="text"
             id="imageUrl"
-            name="imageUrl"
+            name="image"
             value={values.image} />
 
           <label htmlFor="name">Product Name:</label>
@@ -67,11 +67,6 @@ export default function Edit({
           />
 
         </form>
-        <div className="edit-delete-container">
-          <button className="edit-button">Edit</button>
-          <button className="delete-button">Delete</button>
-        </div>
-        <div className="error-message"></div>
       </div>
     </section>
   )
