@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { Link } from 'react-router-dom'
-import { useForm } from "../hooks/useForm";
+import { useForm } from "../../hooks/useForm";
 
-import { AuthContext } from "./contexts/AuthContext";
+import { AuthContext } from "../contexts/AuthContext";
 
 export default function Register() {
 

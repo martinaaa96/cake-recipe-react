@@ -29,20 +29,19 @@ export const cakeServiceFactory = (token) => {
         return result
     }
 
-    const remove = (cakeId) => { request.delete(`${baseUrl}/${cakeId}`)
+    const remove = (cakeId) =>  request.delete(`${baseUrl}/${cakeId}`)
 
 
 
-    }
+    const edit = (cakeId, data) =>  request.put(`${baseUrl}/${cakeId}`, data)
 
-    const edit = (cakeId, data) => { request.put(`${baseUrl}/${cakeId}`, data)
-}
 
     return {
         getAll,
         getOne,
         create,
         remove,
+        edit
     }
 
 }

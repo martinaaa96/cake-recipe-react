@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom"
-import { useForm } from "../hooks/useForm"
-import { useService } from '../hooks/useService'
+import { useForm } from "../../hooks/useForm"
+import { useService } from '../../hooks/useService'
 
-import { cakeServiceFactory } from '../services/cakeService';
+import { cakeServiceFactory } from '../../services/cakeService';
 
 export default function Edit({
   onCakeEditSubmit,
@@ -13,6 +13,7 @@ export default function Edit({
   const cakeService = useService(cakeServiceFactory);
 
   const { values, changeHandler, onSubmit, changeValues } = useForm({
+    _id:'',
     image: '',
     name: '',
     description: '',
@@ -29,7 +30,7 @@ export default function Edit({
 
       })
 
-  },[]);
+  },[cakeId]);
   
 
   return (
@@ -40,22 +41,28 @@ export default function Edit({
           <label htmlFor="cake-image">Image:</label>
           <input
             type="text"
-            id="imageUrl"
+            id="image"
             name="image"
-            value={values.image} />
+            value={values.image} 
+            onChange={changeHandler}
+            />
 
           <label htmlFor="name">Product Name:</label>
           <input
             type="text"
             id="name"
             name="name"
-            value={values.name} />
+            value={values.name} 
+            onChange={changeHandler}
+            />
 
           <label htmlFor="description">Product Recipe</label>
           <textarea
             id="description"
             name="description"
             value={values.description}
+            onChange={changeHandler}
+
           ></textarea>
 
           <label htmlFor="time">Cooking time:</label>
@@ -64,9 +71,12 @@ export default function Edit({
             id="time"
             name="time"
             value={values.time}
+            onChange={changeHandler}
+
           />
 
         </form>
+        <button className="btn-hvr-effects mt-3 " type="submit">Save Changes</button>
       </div>
     </section>
   )

@@ -5,18 +5,18 @@ import { cakeServiceFactory } from './services/cakeService';
 import { AuthContext } from './components/contexts/AuthContext';
 import { authServiceFactory } from './services/authService';
 import { useService } from './hooks/useService';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
+import Footer from './components/Footer/Footer';
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 import Catalog from './components/Catalog/Catalog';
 import CreateProduct from './components/CreateProduct/CreateProduct';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 
 import './App.css'
-import Details from './components/Details';
-import Logout from './components/Logout';
-import Edit from './components/Edit';
+import Details from './components/Details/Details';
+import Logout from './components/Logout/Logout';
+import Edit from './components/Edit/Edit';
 
 function App() {
   const navigate = useNavigate();
@@ -87,12 +87,12 @@ function App() {
 
   }
 
-  const onCakeEditSubmit = async ( cakeId, values)=>{
-    const newCake = await cakeService.edit(cakeId, values);
+  const onCakeEditSubmit = async (values)=>{
+    const result = await cakeService.edit(values._id, values);
 
-   setCake(state => [...state, newCake])
+    setCake(state => state.map(x => x._id === values._id ? result : x))   
 
-    navigate(`/catalog/${cakeId}`)
+    navigate(`/catalog/${values._id}`)
   }
   const context = {
     onLoginSubmit,

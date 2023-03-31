@@ -1,8 +1,8 @@
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { useService } from "../hooks/useService";
-import { cakeServiceFactory } from '../services/cakeService'
- import { AuthContext } from "./contexts/AuthContext";
+import { useService } from "../../hooks/useService";
+import { cakeServiceFactory } from '../../services/cakeService'
+ import { AuthContext } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import{ Link} from 'react-router-dom';
 
