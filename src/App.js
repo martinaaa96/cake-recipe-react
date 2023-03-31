@@ -16,6 +16,7 @@ import Header from './components/Header';
 import './App.css'
 import Details from './components/Details';
 import Logout from './components/Logout';
+import Edit from './components/Edit';
 
 function App() {
   const navigate = useNavigate();
@@ -109,6 +110,7 @@ function App() {
             <Route path='/create' element={<CreateProduct onCakeCreateSubmit={onCakeCreateSubmit} />} />
             <Route path='/catalog/:cakeId' element={<Details />} />
             <Route path='/logout' element={<Logout />} />
+            <Route path='/catalog/:cakeId/edit' element={<Edit />} />
           </Routes>
 
 
@@ -117,7 +119,6 @@ function App() {
         </main>
 
         <Footer />
-
 
       </>
     </AuthContext.Provider>

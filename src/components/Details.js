@@ -4,6 +4,8 @@ import { useService } from "../hooks/useService";
 import { cakeServiceFactory } from '../services/cakeService'
  import { AuthContext } from "./contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
+import{ Link} from 'react-router-dom';
+
 export default function Details() {
 
   const {userId} = useContext(AuthContext);
@@ -49,7 +51,7 @@ export default function Details() {
           <h5><span className="time colored">Cooking time: {cake.time}</span></h5>
 {isOwner && (
  <div className="edit-delete-container">
- <button className="edit-button">Edit</button>
+ <Link to={`/catalog/${cake._id}/edit`} className="edit-button">Edit</Link>
  <button className="delete-button" onClick={onDeleteClick}>Delete</button>
 </div>
 )}
