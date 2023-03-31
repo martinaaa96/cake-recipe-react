@@ -5,7 +5,7 @@ const baseUrl = `http://localhost:3030/users`;
 export const authServiceFactory = (token) => {
 
     const request = requestFactory(token)
-    console.log(token)
+
     return {
         login: (data) => request.post(`${baseUrl}/login`, data),
         register: (data) => request.post(`${baseUrl}/register`, data),

@@ -35,7 +35,7 @@ function App() {
   }, []);
 
   const onCakeCreateSubmit = async (data) => {
-    console.log(data)
+    
     const newCake = await cakeService.create(data);
 
     setCake(state => [...state, newCake])
@@ -54,7 +54,7 @@ function App() {
 
     } catch (error) {
 
-      console.log(`Error ${error.message}`)
+      console.log(`Error`)
     }
 
 
@@ -74,7 +74,7 @@ function App() {
 
 
     } catch (error) {
-      console.log(`Error ${error.message}`);
+      console.log(`Error`);
 
     }
   }
