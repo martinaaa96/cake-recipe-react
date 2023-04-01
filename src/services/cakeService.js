@@ -33,7 +33,8 @@ export const cakeServiceFactory = (token) => {
 
 
 
-    const edit = (cakeId, data) =>  request.put(`${baseUrl}/${cakeId}`, data)
+    const edit =  (cakeId, data) => request.put(`${baseUrl}/${cakeId}`, data);
+
 
 
     return {

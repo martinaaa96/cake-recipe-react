@@ -14,7 +14,7 @@ export default function Catalog({
 
 
       {cakes.length === 0 &&(
-        <h4 className="pt-4">No Cakes yet</h4>
+        <h4 className="pt-4 colored ">No cakes recipes yet </h4>
       )
       }
 

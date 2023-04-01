@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import { cakeServiceFactory } from './services/cakeService';
-import { AuthContext } from './contexts/AuthContext';
-import { authServiceFactory } from './services/authService';
+import { AuthProvider } from './contexts/AuthContext';
+
 import { useService } from './hooks/useService';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
@@ -23,10 +23,10 @@ function App() {
 
   const [cakes, setCake] = useState([]);
 
-  const [auth, setAuth] = useState({});
+  
 
-  const cakeService = cakeServiceFactory(auth.accessToken);
-  const authService = authServiceFactory(auth.accessToken)
+  const cakeService = cakeServiceFactory();
+
 
   useEffect(() => {
     cakeService.getAll()
@@ -44,68 +44,18 @@ function App() {
     navigate('/catalog')
   }
 
-
-  const onLoginSubmit = async (data) => {
-
-    try {
-      const result = await authService.login(data);
-      setAuth(result)
-
-      navigate('/');
-
-    } catch (error) {
-
-      console.log(`Error`)
-    }
-
-
-  }
-
-  const onRegisterSubmit = async (values) => {
-    const { repeatPassword, ...dataRegister } = values;
-    if (repeatPassword !== dataRegister.password) {
-
-      return;
-    }
-    try {
-
-      const result = await authService.register(dataRegister);
-      setAuth(result)
-      navigate('/login');
-
-
-    } catch (error) {
-      console.log(`Error`);
-
-    }
-  }
-  const onLogout = async () => {
-
-    await authService.logout();
-    setAuth({});
-
-
-  }
+  
 
   const onCakeEditSubmit = async (values)=>{
     const result = await cakeService.edit(values._id, values);
 
-    setCake(state => state.map(x => x._id === values._id ? result : x))   
+    setCake(state => state.map(x => x._id === values._id ? result : x))
 
-    navigate(`/catalog/${values._id}`)
+    navigate(`/catalog/${values._id}`);
   }
-  const context = {
-    onLoginSubmit,
-    onRegisterSubmit,
-    onLogout,
-    userId: auth._id,
-    token: auth.accessToken,
-    userEmail: auth.email,
-    isAuthenticated: !!auth.accessToken,
-
-  };
+  
   return (
-    <AuthContext.Provider value={context}>
+    <AuthProvider>
       <>
         <Header />
 
@@ -129,7 +79,7 @@ function App() {
         <Footer />
 
       </>
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }
 

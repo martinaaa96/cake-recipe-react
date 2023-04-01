@@ -7,7 +7,8 @@ import { cakeServiceFactory } from '../../services/cakeService';
 
 export default function Edit({
   onCakeEditSubmit,
-}) {
+}) 
+{
 
   const { cakeId } = useParams();
   const cakeService = useService(cakeServiceFactory);
@@ -21,6 +22,7 @@ export default function Edit({
 
   }, onCakeEditSubmit);
 
+ 
   useEffect(() => {
 
     cakeService.getOne(cakeId)
@@ -31,13 +33,13 @@ export default function Edit({
       })
 
   },[cakeId]);
-  
+ 
 
   return (
     <section>
+       <h2>Edit product</h2>
       <div className="product-container">
-        <h2>Edit product</h2>
-        <form method="POST" onSubmit={onSubmit}>
+        <form id="edit" onSubmit={onSubmit} method="POST">
           <label htmlFor="cake-image">Image:</label>
           <input
             type="text"

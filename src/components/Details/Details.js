@@ -4,7 +4,7 @@ import { useService } from "../../hooks/useService";
 import { cakeServiceFactory } from '../../services/cakeService'
  import { AuthContext } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-import{ Link} from 'react-router-dom';
+import{ Link } from 'react-router-dom';
 
 export default function Details() {
 
@@ -28,13 +28,13 @@ export default function Details() {
   }, [cakeId])
 
 
-  const isOwner = cake.__ownerId === userId;
+  const isOwner = cake._ownerId === userId;
 
   const onDeleteClick =  async () => {
 
- const deteleCake = await  cakeService.remove(cake._id)
+ await  cakeService.remove(cake._id)
 
- setCake()
+ //setCake()
  
  navigate('/catalog');
 
@@ -49,13 +49,12 @@ export default function Details() {
           <img className="image" src={cake.image} />
           <p>Recipe: {cake.description} </p>
           <h5><span className="time colored">Cooking time: {cake.time}</span></h5>
-
- <div className="edit-delete-container">
- <Link to={`/catalog/${cake._id}/edit`} className="edit-button">Edit</Link>
- <button className="delete-button" onClick={onDeleteClick}>Delete</button>
-</div>
-
-   <div className="error-message"></div>
+{ isOwner && 
+  <div className="edit-delete-container">
+  <Link to={`/catalog/${cake._id}/edit`} className="edit-button">Edit</Link>
+  <button className="delete-button" onClick={onDeleteClick}>Delete</button>
+ </div>
+}
         </div>
       </section>
     </>
