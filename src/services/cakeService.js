@@ -41,7 +41,7 @@ export const cakeServiceFactory = (token) => {
         getOne,
         create,
         remove,
-        edit
+        edit,
     }
 
 }

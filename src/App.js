@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import { cakeServiceFactory } from './services/cakeService';
-import { AuthContext } from './components/contexts/AuthContext';
+import { AuthContext } from './contexts/AuthContext';
 import { authServiceFactory } from './services/authService';
 import { useService } from './hooks/useService';
 import Footer from './components/Footer/Footer';
