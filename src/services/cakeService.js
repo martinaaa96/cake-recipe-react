@@ -5,7 +5,7 @@ const baseUrl = 'http://localhost:3030/data/cakes'
 
 export const cakeServiceFactory = (token) => {
 
-    const request = requestFactory(token)
+    const request = requestFactory(token);
 
     const getAll = async () => {
         const result = await request.get(baseUrl)
@@ -18,7 +18,7 @@ export const cakeServiceFactory = (token) => {
         const result = await request.get(`${baseUrl}/${cakeId}`)
 
 
-        return result
+        return result;
     }
 
     const create = async (dataCake) => {

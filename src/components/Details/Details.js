@@ -25,7 +25,7 @@ export default function Details() {
         setCake(result)
       })
 
-  }, [cakeId])
+  },[cakeId])
 
 
   const isOwner = cake._ownerId === userId;

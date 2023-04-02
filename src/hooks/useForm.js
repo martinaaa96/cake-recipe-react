@@ -3,9 +3,11 @@ import { useState } from 'react';
 export const useForm = (initialValues, onSubmitHandler) => {
     const [values, setValues] = useState(initialValues);
 
+  console.log(onSubmitHandler)
+
     const changeHandler = (e) => {
         setValues(state => ({...state, [e.target.name]: e.target.value}));
-
+      
     };
 
     const onSubmit = (e) => {
@@ -19,8 +21,9 @@ export const useForm = (initialValues, onSubmitHandler) => {
        
         setValues(newValues);
 
-      
+      console.log(newValues)
     };
+
 
     return {
         values,

@@ -7,6 +7,7 @@ import { cakeServiceFactory } from '../../services/cakeService';
 
 export default function Edit({
   onCakeEditSubmit,
+  
 }) 
 {
 
@@ -34,6 +35,7 @@ export default function Edit({
 
   },[cakeId]);
  
+
 
   return (
     <section>
@@ -78,7 +80,7 @@ export default function Edit({
           />
 
         </form>
-        <button className="btn-hvr-effects mt-3 " type="submit">Save Changes</button>
+        <input className="btn-hvr-effects mt-3" type="submit" value="Save Changes" />
       </div>
     </section>
   )

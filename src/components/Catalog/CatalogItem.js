@@ -12,14 +12,14 @@ export default function CatalogItem({
       <div className="product">
         <img src={image} />
         <h4 className="pt-4">{name}</h4>
+        <div className="likes">
+<span className = "heart colored text-left"> &#10084;</span>
+  </div>
 
         <div className="pix_btn">
           <Link to={`/catalog/${_id}`} className="btn-hvr-effects mt-3">Details</Link>
+          
         </div>
-        <div className="">
-<span className = "heart colored">&#10084;</span>
-  </div>
-
       </div>
     </div>
   )

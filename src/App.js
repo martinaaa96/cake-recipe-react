@@ -22,9 +22,6 @@ function App() {
   const navigate = useNavigate();
 
   const [cakes, setCake] = useState([]);
-
-  
-
   const cakeService = cakeServiceFactory();
 
 
@@ -48,6 +45,7 @@ function App() {
 
   const onCakeEditSubmit = async (values)=>{
     const result = await cakeService.edit(values._id, values);
+
 
     setCake(state => state.map(x => x._id === values._id ? result : x))
 
