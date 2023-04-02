@@ -34,7 +34,8 @@ export default function Details() {
 
  await  cakeService.remove(cake._id)
 
- //setCake()
+ setCake(state => state.filter(x => x._id !== cake._id));
+
  
  navigate('/catalog');
 

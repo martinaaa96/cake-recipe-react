@@ -33,7 +33,16 @@ function App() {
   }, []);
 
   const onCakeCreateSubmit = async (data) => {
-    
+  
+
+    if (data.name === '' || data.description === ''|| data.time === '' || data.image === ''){
+      return alert('All fields - requied');
+      
+    }
+
+    if(data.name.length < 7){
+      alert('Cake name shuold be at least 7 characters')
+    }
     const newCake = await cakeService.create(data);
 
     setCake(state => [...state, newCake])

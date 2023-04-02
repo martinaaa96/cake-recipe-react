@@ -9,8 +9,8 @@ export default function CreateProduct({
 		time: '',
 		image: '',
 
+		
 	}, onCakeCreateSubmit);
-
 
 	return (
 		<section>
@@ -55,7 +55,7 @@ export default function CreateProduct({
 
 					<input type="submit" value="Add Product" />
 				</form>
-			
+				
 			</div>
 		</section>
 	)
