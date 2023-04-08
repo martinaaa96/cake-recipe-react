@@ -6,16 +6,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-## Technologies and Features
+## Technologies : 
 
 ReactJS
 JavaScript
 HTML
 CSS
 
-This project comes with the following features:
+##  Features:
 
-Ability to add cake recipes  to your profile  with the following details:
+# Ability to add cake recipes  to your profile  with the following details:
 
 Name 
 image 
