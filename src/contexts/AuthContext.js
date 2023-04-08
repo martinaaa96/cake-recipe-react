@@ -1,4 +1,4 @@
-import { createContext, useContext} from "react";
+import { createContext, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { authServiceFactory } from '../services/authService';
@@ -8,35 +8,44 @@ export const AuthContext = createContext();
 
 
 export const AuthProvider = ({
-    children,
-})=>{
-    const navigate = useNavigate(); 
+  children,
+}) => {
+  const navigate = useNavigate();
 
-    const [auth, setAuth] = useLocalStorage('auth',{});
-    const authService = authServiceFactory(auth.accessToken);
+  const [auth, setAuth] = useLocalStorage('auth', {});
+  const authService = authServiceFactory(auth.accessToken);
 
-    const onRegisterSubmit = async (values) => {
-        const { repeatPassword, ...dataRegister } = values;
-        if (repeatPassword !== dataRegister.password) {
-    
-          return;
-        }
-        try {
-    
-          const result = await authService.register(dataRegister);
-          setAuth(result);
+  const onRegisterSubmit = async (values) => {
 
-          navigate('/login');
+    const { repeatPassword, ...dataRegister } = values;
+
+    if (repeatPassword !== dataRegister.password) {
+
+      return alert('Passwords don\'t match!');
+
+    }
+    try {
+
+      const result = await authService.register(dataRegister);
+      setAuth(result);
+
+      navigate('/login');
+
+
+    } catch (error) {
     
-    
-        } catch (error) {
-          console.log(error.message);
-    
-        }
-      }
-  
+      console.log(error.message);
+
+    }
+  }
+
 
   const onLoginSubmit = async (data) => {
+
+if(data.email === "" || data.password === ""){
+  
+  return alert('Email or password don\'t match!');
+}
 
     try {
       const result = await authService.login(data);
@@ -45,45 +54,43 @@ export const AuthProvider = ({
       navigate('/');
 
     } catch (error) {
-
+     
       console.log(error.message)
     }
 
 
   }
 
+  const onLogout = async () => {
 
-      
-    const onLogout = async () => {
+    await authService.logout();
+    setAuth({});
 
-        await authService.logout();
-        setAuth({});
-    
-    
-      }
 
-    const context = {
-        onLoginSubmit,
-        onRegisterSubmit,
-        onLogout,
-        userId: auth._id,
-        token: auth.accessToken,
-        userEmail: auth.email,
-        isAuthenticated: !!auth.accessToken,
-    
-      };
+  }
 
-    return (
-        <>
-        <AuthContext.Provider value={context}>
-            {children}
-        </AuthContext.Provider>
-        </>
-    )
+  const context = {
+    onLoginSubmit,
+    onRegisterSubmit,
+    onLogout,
+    userId: auth._id,
+    token: auth.accessToken,
+    userEmail: auth.email,
+    isAuthenticated: !!auth.accessToken,
+
+  };
+
+  return (
+    <>
+      <AuthContext.Provider value={context}>
+        {children}
+      </AuthContext.Provider>
+    </>
+  )
 }
 
-export const useAuthContext = ()=>{
-    const context = useContext(AuthContext);
+export const useAuthContext = () => {
+  const context = useContext(AuthContext);
 
-    return context
+  return context
 }

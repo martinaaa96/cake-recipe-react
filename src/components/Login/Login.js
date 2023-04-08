@@ -5,20 +5,16 @@ import { useAuthContext } from "../../contexts/AuthContext"
 import { useForm } from "../../hooks/useForm"
 export default function Login() {
 
-  const LoginFormKeys = {
-    Email: 'email',
-    Password: 'password'
-  }
-
   const { onLoginSubmit} = useAuthContext();
 
   
   const { values, changeHandler, onSubmit} = useForm({
-    [LoginFormKeys.Email]: '',
-    [LoginFormKeys.Password]: '',
+    email: '',
+  password: '',
 
   }, onLoginSubmit);
 
+  
 
   return (
     <section>
@@ -30,17 +26,17 @@ export default function Login() {
           <input
             type="text"
             id="email"
-            name={LoginFormKeys.Email}
+            name="email"
             placeholder="marti@gmail.com"
-            values={values[LoginFormKeys.Email]}
+            values={values.email}
              onChange={changeHandler} />
 
           <label htmlFor="password">Password:</label>
           <input
             type="password"
             id="password"
-            name={LoginFormKeys.Password}
-            values={values[LoginFormKeys.Password]}
+            name="password"
+            values={values.password}
              onChange={changeHandler} />
 
           <input type="submit" value="Login" />
@@ -49,7 +45,7 @@ export default function Login() {
         <div className="register-link">
           Don't have an account? <Link to="/register">Register here</Link>
         </div>
-        <div className="error-message">error</div>
+        <div className="error-message"></div>
       </div>
     </section>
   )
