@@ -11,13 +11,10 @@ export const CakeProvider = ({
     children
 })=>{
     const navigate = useNavigate();
-
     const [cakes, setCake] = useState([]);
     const cakeService = cakeServiceFactory();
    
   
-        
-
   useEffect(() => {
     cakeService.getAll()
       .then(result => {
@@ -49,6 +46,10 @@ export const CakeProvider = ({
         navigate(`/catalog/${values._id}`);
       }
 
+      const deleteCake = (cakeId) =>{
+      setCake(state => state.filter(cake=> cake._id !== cakeId ))
+      }
+
       
 const cakeGet = (cakeId)=>{
 
@@ -60,6 +61,7 @@ const contextValues = {
   onCakeCreateSubmit,
   onCakeEditSubmit,
   cakeGet,
+  deleteCake,
 
 }
 

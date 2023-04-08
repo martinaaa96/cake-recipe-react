@@ -18,6 +18,7 @@ import Details from './components/Details/Details';
 import Logout from './components/Logout/Logout';
 import Edit from './components/Edit/Edit';
  import RouteGuard from './components/common/RouteGuard';
+import { CakeOwner } from './components/common/CakeOwner';
 
 
 function App() {
@@ -40,7 +41,11 @@ function App() {
             <Route path='/logout' element={<Logout />} />
 
             <Route element ={<RouteGuard/>}>
-            <Route path='/catalog/:cakeId/edit' element={<Edit />} />
+            <Route path='/catalog/:cakeId/edit' element={
+              <CakeOwner>
+                <Edit />
+              </CakeOwner>
+            } />
             </Route>
             
             <Route path='/*' element={<Error />} />

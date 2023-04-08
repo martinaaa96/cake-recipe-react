@@ -5,7 +5,7 @@ import { cakeServiceFactory } from '../../services/cakeService'
 import { AuthContext } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import { Cake } from '../../contexts/CakeContext'
+import { useCakeContext } from '../../contexts/CakeContext'
 
 export default function Details() {
 
@@ -13,6 +13,7 @@ export default function Details() {
 
   const { cakeId } = useParams();
   const [cake, setCake] = useState({});
+  const { deleteCake } = useCakeContext();
 
   const cakeService = useService(cakeServiceFactory);
 
@@ -34,16 +35,17 @@ export default function Details() {
   const onDeleteClick = async () => {
 
 
-    const confirmation = window.confirm(`Are you sure you want to delete cake recipe of ${cake.name}?`)
+    const confirmation = window.confirm(`Are you sure you want to delete this cake recipe on: ${cake.name}?`)
 
-    //if (confirmation) {
-      //await cakeService.remove(cake._id)
+    if (confirmation) {
+      await cakeService.remove(cake._id)
 
-     // deleteCake(cake._id)
+     deleteCake(cake._id)
      /// setCake(state => [state.filter(cake => cake._id !== cakeId),result]);
 
       navigate('/catalog');
-  //  }
+      
+   }
 
 
 
