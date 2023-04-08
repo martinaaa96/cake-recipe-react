@@ -15,7 +15,7 @@ To run this project locally, follow the steps below:
 
 This project uses the following dependencies:
 
-react\
+**react\
 react-dom\
 react-router-dom\
 react-scripts
@@ -30,7 +30,8 @@ The recipe\
 Description\
 Image
 
-Ability to view all the cake recipe.Ability to edit recipe ,details or delete a recipe from your profile.
+Ability to view all the cake recipe.\
+Ability to edit recipe ,details or delete a recipe from your profile.
 
 # Available Scripts
 
