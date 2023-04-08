@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom'
 
 export default function CatalogItem({
@@ -7,6 +8,7 @@ export default function CatalogItem({
   time,
   image,
 }) {
+
   return (
     <div className="product-catalog">
       <div className="product">
