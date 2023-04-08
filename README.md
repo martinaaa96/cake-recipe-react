@@ -1,11 +1,28 @@
 
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+To run this project locally, follow the steps below:
 
-In the project directory, you can run:
+1.Clone this repository to your local machine using git clon (https://github.com/martinaaa96/cake-recipe-react)
+2.Install all the dependencies by running npm install
+3.Start the development server by running npm start
+4.Open your browser and navigate to http://localhost:3000
+
+
+## Dependencies: 
+
+This project uses the following dependencies:
+
+*react
+*react-dom
+*react-router-dom
+*react-scripts
+
+##  Features:
+
+# Available Scripts
 
 ### `npm start`
 
