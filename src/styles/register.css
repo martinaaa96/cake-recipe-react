@@ -1,0 +1,103 @@
+   /* Register form css style */
+
+   .register-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    background-color: #ce3c83;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #333;
+  }
+  
+  
+
+  .login-link a {
+    color: #1b15bc;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+
+    /* - Buttons Aligns
+------------------------------------------------------------- */
+
+.btn-right{
+    text-align: right;
+    display: block;
+  }
+  
+  html {
+    box-sizing: border-box;
+  
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  .text-center {
+    text-align: center;
+  }
+  
+  
+  
+  /* - Button hover Effects1
+  ------------------------------------------------------------- */
+  [class^="btn-"] {
+      display: inline-block;
+      padding: 0.75em 1.5em;
+      cursor: pointer;
+      background: #ce3c83;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #fff;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .btn-hvr-effects:hover, 
+  .btn-hvr-effects:focus, 
+  .btn-hvr-effects:active {
+      text-decoration: none;
+      color: #fff;    
+      background: #333;
+  }

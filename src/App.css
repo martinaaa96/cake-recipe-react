@@ -150,7 +150,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 /** . Catalog css style 
---------------------------------------------------------------*/
+--------------------------------------------------------------
 
 
 .product-catalog {
@@ -183,23 +183,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-size: 14px;
   margin-bottom: 10px;
 }
-/*--------------------------------------------------------------
-/** 7. Form Styles
---------------------------------------------------------------*/
-form .row {
-  padding-bottom: 0;
-}
-
-label, legend {
-  display: block;
-  margin-bottom: 0.5em;
-  font-size: 13px;
-  color: #a7a7a7;
-  letter-spacing: 1px;
-}
-
-
-
+*/
 
 /* - Buttons Aligns
 ------------------------------------------------------------- */
@@ -249,7 +233,7 @@ html {
 }
 
 /* -- Navbar
---------------------------------------------------------------*/
+--------------------------------------------------------------
 nav {
   display: flex;
   justify-content: space-between;
@@ -290,12 +274,12 @@ a.nav-link {
   margin-right: auto;
     
 }
-
+*/
 
 
 
 /* -- Homepage Banner Section
---------------------------------------------------------------*/
+--------------------------------------------------------------
 
 main .text-content{
   position: absolute;
@@ -307,11 +291,11 @@ main .text-content{
   z-index: 2;
 }
 
+*/
 
 
 
-
-/* Login form css style*/
+/* Login form css style 
 .login-container {
   background-color: #fff;
   border-radius: 5px;
@@ -355,10 +339,6 @@ input[type="submit"]:hover {
   background-color: #333;
 }
 
-.error-message {
-  color: red;
-  margin-bottom: 20px;
-}
 
 .register-link {
   text-align: center;
@@ -372,10 +352,10 @@ input[type="submit"]:hover {
 .register-link a:hover {
   text-decoration: underline;
 }
+*/
 
 
-
-    /* Register form css style */
+    /* Register form css style 
 
 .register-container {
         background-color: #fff;
@@ -405,6 +385,7 @@ input[type="submit"]:hover {
         border-radius: 5px;
         margin-bottom: 20px;
         box-sizing: border-box;
+       
       }
       
       input[type="submit"] {
@@ -415,26 +396,26 @@ input[type="submit"]:hover {
         border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
+      position: relative;
       }
       
       input[type="submit"]:hover {
         background-color: #333;
       }
       
-      .error-message {
-        color: red;
-        margin-bottom: 20px;
-      }
+      
 
       .login-link a {
         color: #1b15bc;
         text-decoration: none;
       }
       
-      .register-link a:hover {
+      .login-link a:hover {
         text-decoration: underline;
       }
-      /* Create product css style */
+*/
+
+      /* Create product css style 
 
       .product-container {
         background-color: #fff;
@@ -485,12 +466,9 @@ input[type="submit"]:hover {
         background-color: #333;
       }
       
-      .error-message {
-        color: red;
-        margin-bottom: 20px;
-      }
+      */
 
-      /* Details page css style */
+      /* Details page css style 
       .container {
         display: flex;
         flex-direction: default;
@@ -533,10 +511,7 @@ input[type="submit"]:hover {
         background-color: #333;
       }
       
-      .error-message {
-        color: red;
-        margin-bottom: 20px;
-      }
+    
       
       .edit-delete-container {
         display: flex;
@@ -568,7 +543,7 @@ input[type="submit"]:hover {
         margin-bottom: 1px;
         position: center;
       }
-      
+      */
 
       
        /* Like button heart  css style */

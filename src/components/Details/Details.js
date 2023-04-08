@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { useCakeContext } from '../../contexts/CakeContext'
 
+import '../../styles/details.css'
 export default function Details() {
 
   const { userId } = useContext(AuthContext);

@@ -1,0 +1,123 @@
+      /* Details page css style */
+      .container {
+        display: flex;
+        flex-direction: default;
+        align-items: flex-start;
+        margin-top: 50px;
+      }
+      
+      .name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .image {
+        max-width: 200px;
+        margin-bottom: 20px;
+      }
+      
+      .description {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      
+      .time {
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 20px;
+      }
+      input[type="submit"] {
+        background-color: #ce3c83;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #333;
+      }
+      
+    
+      
+      .edit-delete-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      
+      .edit-button,
+      .delete-button {
+        background-color: #ce3c83;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      
+      .edit-button:hover {
+        background-color: #333;
+      }
+      
+      .delete-button:hover {
+        background-color: #f44336;
+      }
+      .product-image {
+        width: 35%;
+        height: auto;
+        margin-bottom: 1px;
+        position: center;
+      }
+      
+
+         /* - Buttons Aligns
+------------------------------------------------------------- */
+
+.btn-right{
+    text-align: right;
+    display: block;
+  }
+  
+  html {
+    box-sizing: border-box;
+  
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  .text-center {
+    text-align: center;
+  }
+  
+  
+  
+  /* - Button hover Effects1
+  ------------------------------------------------------------- */
+  [class^="btn-"] {
+      display: inline-block;
+      padding: 0.75em 1.5em;
+      cursor: pointer;
+      background: #ce3c83;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #fff;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .btn-hvr-effects:hover, 
+  .btn-hvr-effects:focus, 
+  .btn-hvr-effects:active {
+      text-decoration: none;
+      color: #fff;    
+      background: #333;
+  }

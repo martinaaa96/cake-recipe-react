@@ -1,0 +1,81 @@
+/** . Catalog css style 
+--------------------------------------------------------------*/
+
+
+.product-catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+  }
+  
+  .product {
+    width: 20%;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    flex-wrap: wrap;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .product p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  /* - Buttons Aligns
+------------------------------------------------------------- */
+
+.btn-right{
+    text-align: right;
+    display: block;
+  }
+  
+  html {
+    box-sizing: border-box;
+  
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  .text-center {
+    text-align: center;
+  }
+  
+  
+  
+  /* - Button hover Effects1
+  ------------------------------------------------------------- */
+  [class^="btn-"] {
+      display: inline-block;
+      padding: 0.75em 1.5em;
+      cursor: pointer;
+      background: #ce3c83;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #fff;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .btn-hvr-effects:hover, 
+  .btn-hvr-effects:focus, 
+  .btn-hvr-effects:active {
+      text-decoration: none;
+      color: #fff;    
+      background: #333;
+  }

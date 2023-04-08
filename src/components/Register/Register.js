@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useForm } from "../../hooks/useForm";
 
 import { AuthContext } from "../../contexts/AuthContext";
+import '../../styles/register.css'
 
 export default function Register() {
 
@@ -47,7 +48,7 @@ export default function Register() {
 
           <input type="submit" value="Register" />
         </form>
-        <div className="error-message"></div>
+        
         <div className="login-link">
           You already have an account - <Link to="/login"> Login here</Link>
         </div>

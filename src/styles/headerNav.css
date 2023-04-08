@@ -1,0 +1,67 @@
+/* -- Navbar and  header style 
+--------------------------------------------------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 10px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+    
+  }
+  
+  
+  .nav-links a {
+    color: #100f0f;
+    text-decoration: none;
+    
+    font-size: 18px;
+    padding: 0px 20px; 
+  }
+  
+  
+  a.nav-link {
+      color: #111;
+    
+     
+  }
+  .navbar-nav .nav-item a.nav-link:focus,
+  .navbar-nav .nav-item a.nav-link:hover,
+  .navbar-nav .nav-item.active a.nav-link {
+    color: #ce3c83;
+    margin-right: auto;
+      
+  }
+  
+  
+
+  /* - Button hover Effects1
+  ------------------------------------------------------------- */
+  [class^="btn-"] {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    background: #ce3c83;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-hvr-effects:hover, 
+.btn-hvr-effects:focus, 
+.btn-hvr-effects:active {
+    text-decoration: none;
+    color: #fff;    
+    background: #333;
+}  

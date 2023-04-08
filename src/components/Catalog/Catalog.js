@@ -1,3 +1,4 @@
+import '../../styles/catalog.css'
 import { useCakeContext } from "../../contexts/CakeContext";
 import CatalogItem from "./CatalogItem";
 

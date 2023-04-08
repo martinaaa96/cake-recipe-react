@@ -1,3 +1,4 @@
+import '../../styles/headerNav.css'
 import { useContext } from "react";
 
 import { Link } from "react-router-dom";

@@ -1,5 +1,6 @@
 import { useCakeContext } from "../../contexts/CakeContext";
 import { useForm } from "../../hooks/useForm"
+import '../../styles/create.css'
 
 export default function CreateProduct() {
 

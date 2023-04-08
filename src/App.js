@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { CakeProvider } from './contexts/CakeContext';
 
-//import { useService } from './hooks/useService';
+
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
@@ -13,7 +13,7 @@ import Catalog from './components/Catalog/Catalog';
 import CreateProduct from './components/CreateProduct/CreateProduct';
 import Header from './components/Header/Header';
 import Error from './components/Error/Error';
-import './App.css'
+
 import Details from './components/Details/Details';
 import Logout from './components/Logout/Logout';
 import Edit from './components/Edit/Edit';
