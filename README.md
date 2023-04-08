@@ -17,15 +17,7 @@ react-scripts
 
 ##  Features:
 
-# Ability to add cake recipes  to your profile  with the following details:
-
-Name 
-image 
-Description: recipe 
-Cooking time 
-Ability to view all the recipes in your profile Ability to edit cake recipe , details or delete a cake recipe  from your profile
-
-
+# Available Scripts
 
 ### `npm start`
 
