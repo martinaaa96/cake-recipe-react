@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Dependencies: 
 
-# This project uses the following dependencies:
+This project uses the following dependencies:
 
 react
 react-dom
