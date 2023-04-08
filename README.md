@@ -5,9 +5,9 @@
 
 To run this project locally, follow the steps below:
 
-1.Clone this repository to your local machine using git clon (https://github.com/martinaaa96/cake-recipe-react)
-2.Install all the dependencies by running npm install
-3.Start the development server by running npm start
+1.Clone this repository to your local machine using git clon [https://github.com/martinaaa96/cake-recipe-react]\
+2.Install all the dependencies by running npm install\
+3.Start the development server by running npm start\
 4.Open your browser and navigate to http://localhost:3000
 
 
@@ -15,12 +15,23 @@ To run this project locally, follow the steps below:
 
 This project uses the following dependencies:
 
-*react
-*react-dom
-*react-router-dom
-*react-scripts
+react\
+react-dom\
+react-router-dom\
+react-scripts
 
 ##  Features:
+This project comes with the following features:
+
+Ability to add Cake recipes  to your profile with the following details:
+
+Name of the cake recipe\
+The recipe\
+Description\
+Image
+
+Ability to view all the cake recipe.\
+Ability to edit recipe ,details or delete a recipe from your profile.
 
 # Available Scripts
 
