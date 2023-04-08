@@ -1,9 +1,3 @@
-*Technologies
-ReactJS
-JavaScript
-HTML
-CSS
-Node.js
 
 # Getting Started with Create React App
 
