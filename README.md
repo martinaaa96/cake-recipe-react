@@ -5,10 +5,10 @@
 
 To run this project locally, follow the steps below:
 
-*Clone this repository to your local machine using git clon (https://github.com/martinaaa96/cake-recipe-react)
-*Install all the dependencies by running npm install
-*Start the development server by running npm start
-*Open your browser and navigate to http://localhost:3000
+1.Clone this repository to your local machine using git clon (https://github.com/martinaaa96/cake-recipe-react)
+2.Install all the dependencies by running npm install
+3.Start the development server by running npm start
+4.Open your browser and navigate to http://localhost:3000
 
 
 ## Dependencies: 
