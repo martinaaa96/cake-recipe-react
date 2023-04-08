@@ -21,6 +21,16 @@ react-router-dom
 react-scripts
 
 ##  Features:
+This project comes with the following features:
+
+Ability to add Cake recipes  to your profile with the following details:
+
+Name of the cake recipe 
+The recipe 
+Description
+Image
+
+Ability to view all the cake recipe.Ability to edit recipe ,details or delete a recipe from your profile.
 
 # Available Scripts
 
