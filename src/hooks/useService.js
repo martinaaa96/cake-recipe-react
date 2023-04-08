@@ -8,5 +8,6 @@ export const useService = (serviceFactory) => {
 
     const service = serviceFactory(token);
 
+   
     return service
 }

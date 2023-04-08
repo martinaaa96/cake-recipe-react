@@ -36,19 +36,16 @@ const requester = async (method, token, url, data) => {
 };
 
 export const requestFactory = (token) => {
+    if (!token) {
+        const serializedAuth = localStorage.getItem('auth');
 
-
-    if(!token){
-
-        const serialisedAuth = localStorage.getItem('auth');
-        if(serialisedAuth){
-            const auth = JSON.parse(serialisedAuth);
-
+        if (serializedAuth) {
+            const auth = JSON.parse(serializedAuth);
             token = auth.accessToken;
-
         }
     }
-      return {
+
+    return {
         get: requester.bind(null, 'GET', token),
         post: requester.bind(null, 'POST', token),
         put: requester.bind(null, 'PUT', token),
@@ -56,5 +53,3 @@ export const requestFactory = (token) => {
         delete: requester.bind(null, 'DELETE', token),
     }
 };
-
-

@@ -10,9 +10,10 @@ export default function Login() {
     Password: 'password'
   }
 
-  const { onLoginSubmit } = useAuthContext();
+  const { onLoginSubmit} = useAuthContext();
 
-  const { values, changeHandler, onSubmit } = useForm({
+  
+  const { values, changeHandler, onSubmit} = useForm({
     [LoginFormKeys.Email]: '',
     [LoginFormKeys.Password]: '',
 
@@ -48,6 +49,7 @@ export default function Login() {
         <div className="register-link">
           Don't have an account? <Link to="/register">Register here</Link>
         </div>
+        <div className="error-message">error</div>
       </div>
     </section>
   )

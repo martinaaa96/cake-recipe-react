@@ -2,20 +2,17 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom"
 import { useForm } from "../../hooks/useForm"
 import { useService } from '../../hooks/useService'
-
+import { useCakeContext } from "../../contexts/CakeContext";
 import { cakeServiceFactory } from '../../services/cakeService';
 
-export default function Edit({
-  onCakeEditSubmit,
-  
-}) 
-{
-
+export default function Edit() {
+  const { onCakeEditSubmit } = useCakeContext();
   const { cakeId } = useParams();
   const cakeService = useService(cakeServiceFactory);
 
+
   const { values, changeHandler, onSubmit, changeValues } = useForm({
-    _id:'',
+    _id: '',
     image: '',
     name: '',
     description: '',
@@ -23,23 +20,21 @@ export default function Edit({
 
   }, onCakeEditSubmit);
 
- 
   useEffect(() => {
 
     cakeService.getOne(cakeId)
       .then(result => {
-
         changeValues(result);
 
       })
 
-  },[cakeId]);
- 
+  }, [cakeId]);
+
 
 
   return (
     <section>
-       <h2>Edit product</h2>
+      <h2>Edit product</h2>
       <div className="product-container">
         <form id="edit" onSubmit={onSubmit} method="POST">
           <label htmlFor="cake-image">Image:</label>
@@ -47,18 +42,18 @@ export default function Edit({
             type="text"
             id="image"
             name="image"
-            value={values.image} 
+            value={values.image}
             onChange={changeHandler}
-            />
+          />
 
           <label htmlFor="name">Product Name:</label>
           <input
             type="text"
             id="name"
             name="name"
-            value={values.name} 
+            value={values.name}
             onChange={changeHandler}
-            />
+          />
 
           <label htmlFor="description">Product Recipe</label>
           <textarea
@@ -78,10 +73,10 @@ export default function Edit({
             onChange={changeHandler}
 
           />
-
+          <input className="btn-hvr-effects mt-3" type="submit" value="Save Changes" />
         </form>
-        <input className="btn-hvr-effects mt-3" type="submit" value="Save Changes" />
       </div>
+
     </section>
   )
 }

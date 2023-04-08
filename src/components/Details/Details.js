@@ -2,13 +2,14 @@ import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { useService } from "../../hooks/useService";
 import { cakeServiceFactory } from '../../services/cakeService'
- import { AuthContext } from "../../contexts/AuthContext";
+import { AuthContext } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-import{ Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Cake } from '../../contexts/CakeContext'
 
 export default function Details() {
 
-  const {userId} = useContext(AuthContext);
+  const { userId } = useContext(AuthContext);
 
   const { cakeId } = useParams();
   const [cake, setCake] = useState({});
@@ -25,21 +26,27 @@ export default function Details() {
         setCake(result)
       })
 
-  },[cakeId])
+  }, [cakeId])
 
 
   const isOwner = cake._ownerId === userId;
 
-  const onDeleteClick =  async () => {
+  const onDeleteClick = async () => {
 
- await  cakeService.remove(cake._id)
 
- setCake(state => state.filter(x => x._id !== cake._id));
+    const confirmation = window.confirm(`Are you sure you want to delete cake recipe of ${cake.name}?`)
 
- 
- navigate('/catalog');
+    //if (confirmation) {
+      //await cakeService.remove(cake._id)
 
-  
+     // deleteCake(cake._id)
+     /// setCake(state => [state.filter(cake => cake._id !== cakeId),result]);
+
+      navigate('/catalog');
+  //  }
+
+
+
   }
   return (
     <>
@@ -50,12 +57,12 @@ export default function Details() {
           <img className="image" src={cake.image} />
           <p>Recipe: {cake.description} </p>
           <h5><span className="time colored">Cooking time: {cake.time}</span></h5>
-{ isOwner && 
-  <div className="edit-delete-container">
-  <Link to={`/catalog/${cake._id}/edit`} className="edit-button">Edit</Link>
-  <button className="delete-button" onClick={onDeleteClick}>Delete</button>
- </div>
-}
+          {isOwner &&
+            <div className="edit-delete-container">
+              <Link to={`/catalog/${cake._id}/edit`} className="edit-button">Edit</Link>
+              <button className="delete-button" onClick={onDeleteClick}>Delete</button>
+            </div>
+          }
         </div>
       </section>
     </>

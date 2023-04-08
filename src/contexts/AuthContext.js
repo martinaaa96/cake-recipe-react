@@ -24,12 +24,13 @@ export const AuthProvider = ({
         try {
     
           const result = await authService.register(dataRegister);
-          setAuth(result)
+          setAuth(result);
+
           navigate('/login');
     
     
         } catch (error) {
-          console.log(`Error`);
+          console.log(error.message);
     
         }
       }
@@ -45,7 +46,7 @@ export const AuthProvider = ({
 
     } catch (error) {
 
-      console.log(`Error`)
+      console.log(error.message)
     }
 
 

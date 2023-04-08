@@ -1,9 +1,9 @@
+import { useCakeContext } from "../../contexts/CakeContext";
 import CatalogItem from "./CatalogItem";
 
-export default function Catalog({
-  cakes,
+export default function Catalog() {
 
-}) {
+  const { cakes }= useCakeContext();
 
   return (
     <>

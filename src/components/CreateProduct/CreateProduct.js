@@ -1,8 +1,10 @@
+import { useCakeContext } from "../../contexts/CakeContext";
 import { useForm } from "../../hooks/useForm"
 
-export default function CreateProduct({
-	onCakeCreateSubmit,
-}) {
+export default function CreateProduct() {
+
+	const {onCakeCreateSubmit } = useCakeContext();
+
 	const { values, changeHandler, onSubmit } = useForm({
 		name: '',
 		description: '',
