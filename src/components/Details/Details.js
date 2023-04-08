@@ -41,13 +41,10 @@ export default function Details() {
       await cakeService.remove(cake._id)
 
      deleteCake(cake._id)
-     /// setCake(state => [state.filter(cake => cake._id !== cakeId),result]);
-
+     
       navigate('/catalog');
-      
+
    }
-
-
 
   }
   return (

@@ -43,10 +43,10 @@ export const AuthProvider = ({
 
   const onLoginSubmit = async (data) => {
 
-//if(data.email === "" || data.password === ""){
+if(data.email === "" || data.password === ""){
 
-  //return alert('Email or password don\'t match!');
-//}
+  return alert('Email or password don\'t match!');
+}
 
     try {
       const result = await authService.login(data);

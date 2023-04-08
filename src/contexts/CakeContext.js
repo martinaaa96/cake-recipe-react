@@ -20,11 +20,18 @@ export const CakeProvider = ({
         setCake(result)
       })
   }, []);
+
   const onCakeCreateSubmit = async (data) => {
 
         if (data.name === '' || data.description === ''|| data.time === '' || data.image === ''){
           return alert('All fields are requied');
           
+        } else if( data.name.length < 7){
+          return alert('Cake name should be at least 7 characters!');
+        }else if ( data.description.length < 10){
+          return alert('Cake recipe descripton should be at least 10 characters!');
+        }else if(data.time.length < 2 ){
+          return alert('Cake cooking time  should be at least 2 characters!');
         }
     
         const newCake = await cakeService.create(data);
@@ -37,7 +44,11 @@ export const CakeProvider = ({
       
     
       const onCakeEditSubmit = async (values)=>{
-        
+      
+        if(values.name === "" || values.description === "" || values.time === "" || values.image === ""){
+          return alert('All fields are requied');
+        }
+
         const result = await cakeService.edit(values._id, values);
     
     
@@ -45,6 +56,7 @@ export const CakeProvider = ({
     
         navigate(`/catalog/${values._id}`);
       }
+
 
       const deleteCake = (cakeId) =>{
       setCake(state => state.filter(cake=> cake._id !== cakeId ))
