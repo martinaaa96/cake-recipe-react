@@ -27,7 +27,7 @@ function App() {
   return (
     <AuthProvider>
       <CakeProvider>
-      <>
+      
         <Header />
 
         <main>
@@ -36,9 +36,8 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/catalog' element={<Catalog/>} />
-            <Route path='/create' element={<CreateProduct  />} />
             <Route path='/catalog/:cakeId' element={<Details />} />
-            <Route path='/logout' element={<Logout />} />
+          
 
             <Route element ={<RouteGuard/>}>
             <Route path='/catalog/:cakeId/edit' element={
@@ -46,20 +45,18 @@ function App() {
                 <Edit />
               </CakeOwner>
             } />
+             <Route path='/create' element={<CreateProduct  />} />
+             <Route path='/logout' element={<Logout />} />
             </Route>
             
             <Route path='/*' element={<Error />} />
           
           </Routes>
-
-
-
-
         </main>
 
         <Footer />
 
-      </>
+      
       </CakeProvider>
     </AuthProvider>
   );

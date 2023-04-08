@@ -5,16 +5,18 @@ import { useAuthContext } from "../../contexts/AuthContext"
 import { useForm } from "../../hooks/useForm"
 export default function Login() {
 
+  
+
   const { onLoginSubmit} = useAuthContext();
 
   
   const { values, changeHandler, onSubmit} = useForm({
     email: '',
-  password: '',
+    password: '',
 
   }, onLoginSubmit);
 
-  
+
 
   return (
     <section>
@@ -41,11 +43,11 @@ export default function Login() {
 
           <input type="submit" value="Login" />
         </form>
-        <div className="error-message"></div>
+       
         <div className="register-link">
           Don't have an account? <Link to="/register">Register here</Link>
         </div>
-        <div className="error-message"></div>
+        
       </div>
     </section>
   )

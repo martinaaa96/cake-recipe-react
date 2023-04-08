@@ -2,10 +2,10 @@ import { useCakeContext } from "../../contexts/CakeContext"
 
 import { Navigate, Outlet, useParams } from "react-router-dom";
 import { useAuthContext } from "../../contexts/AuthContext";
-import { Children } from "react";
+
 
 export const CakeOwner = ({
-    chidren,
+    children,
 }) => {
 
     const { cakeId } = useParams();
@@ -20,5 +20,5 @@ export const CakeOwner = ({
         return <Navigate to={`/catalog/${cakeId}`}/>
     }
 
-    return Children ? Children : <Outlet/>
+    return children ? children : <Outlet/>
 }

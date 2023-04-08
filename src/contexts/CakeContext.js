@@ -23,7 +23,7 @@ export const CakeProvider = ({
   const onCakeCreateSubmit = async (data) => {
 
         if (data.name === '' || data.description === ''|| data.time === '' || data.image === ''){
-          return alert('All fields - requied');
+          return alert('All fields are requied');
           
         }
     
@@ -37,6 +37,7 @@ export const CakeProvider = ({
       
     
       const onCakeEditSubmit = async (values)=>{
+        
         const result = await cakeService.edit(values._id, values);
     
     
