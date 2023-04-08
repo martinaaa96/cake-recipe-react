@@ -6,9 +6,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-## Available Scripts
+## Technologies
 
-In the project directory, you can run:
+ReactJS
+JavaScript
+HTML
+CSS
+
 
 ### `npm start`
 
