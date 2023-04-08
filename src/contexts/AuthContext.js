@@ -19,11 +19,13 @@ export const AuthProvider = ({
 
     const { repeatPassword, ...dataRegister } = values;
 
+   
     if (repeatPassword !== dataRegister.password) {
 
       return alert('Passwords don\'t match!');
 
     }
+
     try {
 
       const result = await authService.register(dataRegister);
@@ -33,7 +35,11 @@ export const AuthProvider = ({
 
 
     } catch (error) {
-    
+
+    if(values.email === "" || values.password === "" || values.repeatPassword === ""){
+      
+      return alert('Missing fields!')
+    }
       console.log(error.message);
 
     }
@@ -43,7 +49,7 @@ export const AuthProvider = ({
   const onLoginSubmit = async (data) => {
 
 if(data.email === "" || data.password === ""){
-  
+
   return alert('Email or password don\'t match!');
 }
 
@@ -54,7 +60,10 @@ if(data.email === "" || data.password === ""){
       navigate('/');
 
     } catch (error) {
-     
+      if(data.email === "" || data.password === ""){
+
+        return alert('Email or password don\'t match!');
+      }
       console.log(error.message)
     }
 
