@@ -6,12 +6,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-## Technologies : 
+## Dependencies: 
 
-ReactJS
-JavaScript
-HTML
-CSS
+# This project uses the following dependencies:
+
+react
+react-dom
+react-router-dom
+react-scripts
 
 ##  Features:
 
