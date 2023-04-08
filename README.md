@@ -15,10 +15,10 @@ To run this project locally, follow the steps below:
 
 This project uses the following dependencies:
 
-*react
-*react-dom
-*react-router-dom
-*react-scripts
+react
+react-dom
+react-router-dom
+react-scripts
 
 ##  Features:
 
