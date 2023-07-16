@@ -22,8 +22,6 @@ import { CakeOwner } from './components/common/CakeOwner';
 
 
 function App() {
-
-  
   return (
     <AuthProvider>
       <CakeProvider>
@@ -36,7 +34,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/catalog' element={<Catalog/>} />
-            <Route path='/catalog/:cakeId' element={<Details />} />
+            <Route path='/catalog/:cakeId' element={<Details  />} />
           
 
             <Route element ={<RouteGuard/>}>

@@ -35,7 +35,7 @@ export const AuthProvider = ({
 
 
     } catch (error) {
-      console.log(error.message);
+      throw error.message
 
     }
   }
@@ -56,7 +56,7 @@ if(data.email === "" || data.password === ""){
 
     } catch (error) {
       
-      console.log(error.message)
+      throw error.message
     }
 
 
