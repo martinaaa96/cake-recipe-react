@@ -20,7 +20,7 @@ export default function CatalogItem({
 
         <div className="pix_btn">
           <Link to={`/catalog/${_id}`} className="btn-hvr-effects mt-3">Details</Link>
-          
+
         </div>
       </div>
     </div>

@@ -10,9 +10,6 @@ export default function Logout() {
   useEffect(()=>{
     onLogout();
   },[onLogout]);
-
-  
-
     return <Navigate to='/'/>
 
 
