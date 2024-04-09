@@ -17,7 +17,7 @@ This project uses the following dependencies:
 
 react\
 react-dom\
-react-router-dom\
+react-router-dom
 
 
 ##  Features:
