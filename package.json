@@ -14,12 +14,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-
-    
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +35,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "To run this project locally, follow the steps below:",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinaaa96/cake-recipe-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinaaa96/cake-recipe-react/issues"
+  },
+  "homepage": "https://github.com/martinaaa96/cake-recipe-react#readme"
 }
